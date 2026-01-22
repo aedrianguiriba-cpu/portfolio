@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Graphic Designer, Programmer & Virtual Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-text">Aedrian</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Welcome to my portfolio</div>
+            <h1 class="hero-title">Creative & Technical Excellence</h1>
+            <p class="hero-subtitle">IT Specialist • Software Developer • Graphic Designer • Educator • Virtual Assistant</p>
+            <div class="hero-cta-group">
+                <button class="cta-button" id="resumeBtn">📄 View Resume</button>
+                <a href="#portfolio" class="cta-button cta-secondary">Explore Work</a>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a multi-talented professional with expertise spanning design, development, and business support. With a passion for creating visually stunning designs and building functional applications, I deliver comprehensive solutions to bring ideas to life.</p>
+                    <p>My diverse skill set allows me to understand projects from multiple perspectives, ensuring cohesive and impactful results. Whether you need stunning visual designs, robust software solutions, or efficient business management, I'm here to help.</p>
+                </div>
+                <div class="about-roles">
+                    <div class="role-card">
+                        <div class="role-icon">🎨</div>
+                        <h3>Graphic Designer</h3>
+                        <p>Creating visually compelling designs that communicate your brand message effectively.</p>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon">💻</div>
+                        <h3>Programmer</h3>
+                        <p>Building responsive, scalable applications with clean, efficient code.</p>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon">📋</div>
+                        <h3>Virtual Assistant</h3>
+                        <p>Providing organized, reliable support to streamline your business operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="resume-modal">
+        <div class="resume-modal-overlay"></div>
+        <div class="resume-modal-content">
+            <div class="resume-modal-header">
+                <h2>Professional Resume</h2>
+                <button class="resume-close-btn" id="closeResumeBtn">&times;</button>
+            </div>
+            <div class="resume-modal-body">
+                <div class="resume-wrapper">
+                    <!-- Resume Header -->
+                    <div class="resume-header-section">
+                        <div class="resume-title-block">
+                            <h1 class="resume-name">Aedrian Guiriba</h1>
+                            <p class="resume-title-text">IT Specialist • Software Developer • Graphic Designer • College Instructor</p>
+                        </div>
+                        <div class="resume-contact-info">
+                            <p><strong>Email:</strong> guiribaaedrian183@gmail.com</p>
+                            <p><strong>Phone:</strong> +63 975 743 6621</p>
+                            <p><strong>Location:</strong> Sta. Maria, Minalin, Pampanga, Philippines</p>
+                        </div>
+                    </div>
+
+                    <!-- Professional Summary -->
+                    <div class="resume-section">
+                        <h2 class="resume-section-title">Professional Summary</h2>
+                        <p class="resume-section-content">Highly accomplished and versatile IT professional with a Bachelor's degree in Information Technology and ongoing Master's studies. Proven expertise in software development, web and mobile development (including freelance projects), systems analysis, and graphic design, coupled with strong capabilities in troubleshooting hardware and software issues. Adept at leading creative projects, delivering tailored software solutions, and fostering technical understanding as an educator. Committed to leveraging technical acumen and collaborative skills to drive effective IT solutions and achieve organizational objectives.</p>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="resume-section">
+                        <h2 class="resume-section-title">Core Competencies</h2>
+                        <div class="skills-columns">
+                            <div class="skills-column">
+                                <p class="skills-label"><strong>Programming & Development:</strong></p>
+                                <p class="skills-text">HTML • CSS • JavaScript • PHP • C++ • Dart • Flutter • Visual Basic • SQL • Supabase • Firebase</p>
+                            </div>
+                            <div class="skills-column">
+                                <p class="skills-label"><strong>Software & Design Tools:</strong></p>
+                                <p class="skills-text">Adobe Photoshop • Adobe Illustrator • Adobe Premiere Pro • Figma • Canva • CapCut</p>
+                            </div>
+                            <div class="skills-column">
+                                <p class="skills-label"><strong>IT & Systems:</strong></p>
+                                <p class="skills-text">Computer Hardware & Software Troubleshooting • Systems Analysis</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professional Experience -->
+                    <div class="resume-section">
+                        <h2 class="resume-section-title">Professional Experience</h2>
+                        <div class="resume-experience-item">
+                            <div class="experience-header">
+                                <h3 class="position-title">IT College Instructor</h3>
+                                <span class="exp-date">2023 - 2025</span>
+                            </div>
+                            <p class="company-name">Pampanga State University</p>
+                        </div>
+
+                        <div class="resume-experience-item">
+                            <div class="experience-header">
+                                <h3 class="position-title">Freelance Web and Mobile Developer</h3>
+                                <span class="exp-date">2022 - Present</span>
+                            </div>
+                            <p class="company-name">Remote</p>
+                        </div>
+
+                        <div class="resume-experience-item">
+                            <div class="experience-header">
+                                <h3 class="position-title">Software Developer</h3>
+                                <span class="exp-date">2022 - 2023</span>
+                            </div>
+                            <p class="company-name">Wing An Marketing Inc.</p>
+                        </div>
+
+                        <div class="resume-experience-item">
+                            <div class="experience-header">
+                                <h3 class="position-title">Senior Graphic Designer</h3>
+                                <span class="exp-date">2019 - 2023</span>
+                            </div>
+                            <p class="company-name">Classic Club Philippines</p>
+                        </div>
+
+                        <div class="resume-experience-item">
+                            <div class="experience-header">
+                                <h3 class="position-title">Graphic Designer</h3>
+                                <span class="exp-date">2021 - 2022</span>
+                            </div>
+                            <p class="company-name">XooKool LLC</p>
+                        </div>
+
+                        <div class="resume-experience-item">
+                            <div class="experience-header">
+                                <h3 class="position-title">Graphic Designer</h3>
+                                <span class="exp-date">2019 - 2020</span>
+                            </div>
+                            <p class="company-name">Topolu Publishing Company</p>
+                        </div>
+
+                        <div class="resume-experience-item">
+                            <div class="experience-header">
+                                <h3 class="position-title">Computer Technician</h3>
+                                <span class="exp-date">2018 - 2019</span>
+                            </div>
+                            <p class="company-name">TechPro</p>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="resume-section">
+                        <h2 class="resume-section-title">Education & Certifications</h2>
+                        <div class="resume-education-item">
+                            <div class="education-header">
+                                <h3 class="degree-title">Bachelor of Science in Information Technology</h3>
+                                <span class="edu-date">2019 - 2023</span>
+                            </div>
+                            <p class="institution-name">Pampanga State University</p>
+                        </div>
+
+                        <div class="resume-education-item">
+                            <div class="education-header">
+                                <h3 class="degree-title">Science, Technology, Engineering, and Mathematics (STEM)</h3>
+                                <span class="edu-date">2017 - 2019</span>
+                            </div>
+                            <p class="institution-name">Assumpta Technical High School</p>
+                        </div>
+
+                        <div class="resume-education-item">
+                            <div class="education-header">
+                                <h3 class="degree-title">Field Assist Database Management</h3>
+                                <span class="edu-date">2023</span>
+                            </div>
+                        </div>
+
+                        <div class="resume-education-item">
+                            <div class="education-header">
+                                <h3 class="degree-title">Code of Conduct and Ethical Standards for Public Officials and Employees</h3>
+                                <span class="edu-date">2024</span>
+                            </div>
+                        </div>
+
+                        <div class="resume-education-item">
+                            <div class="education-header">
+                                <h3 class="degree-title">PMI Project Management Ready</h3>
+                                <span class="edu-date">2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Button -->
+                    <div class="resume-footer">
+                        <a href="#" class="download-resume-btn">📄 Download Full Resume (PDF)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="development">Development</button>
+                <button class="filter-btn" data-filter="admin">Admin</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <!-- Design Projects -->
+                <div class="portfolio-item design" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop" alt="Brand Identity Design">
+                        <div class="overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <h3>Brand Identity System</h3>
+                    <p>Complete visual identity design with logo, color palette, typography, and brand guidelines for a tech startup.</p>
+                    <div class="project-tags">
+                        <span class="tag">Adobe Illustrator</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">Branding</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item design" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&h=300&fit=crop" alt="UI/UX Design">
+                        <div class="overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <h3>Mobile App Interface</h3>
+                    <p>User-centered UI/UX design for a fitness tracking mobile application with intuitive navigation and modern aesthetics.</p>
+                    <div class="project-tags">
+                        <span class="tag">Figma</span>
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">Mobile Design</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item design" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1561737404-cd4628902d4a?w=400&h=300&fit=crop" alt="Marketing Materials">
+                        <div class="overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <h3>Marketing Campaign</h3>
+                    <p>Comprehensive marketing design suite including social media graphics, posters, and promotional materials for brand awareness.</p>
+                    <div class="project-tags">
+                        <span class="tag">Adobe Creative</span>
+                        <span class="tag">Social Media</span>
+                        <span class="tag">Print Design</span>
+                    </div>
+                </div>
+
+                <!-- Development Projects - Single Section -->
+                <div class="portfolio-item development github-section" data-category="development">
+                    <div class="github-content">
+                        <div class="github-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>Development Projects</h3>
+                        <p>Explore my full portfolio of development work, including e-commerce platforms, mobile applications, and data visualization dashboards built with modern technologies.</p>
+                        <div class="github-cta">
+                            <span class="cta-text">View on GitHub</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin/Teaching Projects -->
+                <div class="portfolio-item admin" data-category="admin">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Course Curriculum">
+                        <div class="overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <h3>IT Course Curriculum</h3>
+                    <p>Developed comprehensive Information Technology course curriculum with hands-on projects, assessments, and learning materials.</p>
+                    <div class="project-tags">
+                        <span class="tag">Education</span>
+                        <span class="tag">IT Instruction</span>
+                        <span class="tag">Curriculum Design</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item admin" data-category="admin">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Business Systems">
+                        <div class="overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <h3>Business Process Automation</h3>
+                    <p>Streamlined administrative workflows and automated business processes improving operational efficiency by 40%.</p>
+                    <div class="project-tags">
+                        <span class="tag">Systems Analysis</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">Process Design</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item admin" data-category="admin">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Database Design">
+                        <div class="overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <h3>Database Management System</h3>
+                    <p>Designed and implemented SQL database systems for enterprise clients with data organization, security, and efficient querying.</p>
+                    <div class="project-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">Database Design</span>
+                        <span class="tag">Data Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="project-modal-overlay"></div>
+        <div class="project-modal-content">
+            <button class="project-close-btn" id="closeProjectBtn">&times;</button>
+            <div class="project-details-container">
+                <div class="project-details-image">
+                    <img id="projectImage" src="" alt="Project">
+                    <div id="imageCarouselControls" class="carousel-controls" style="display: none;">
+                        <button id="prevImage" class="carousel-btn prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button id="nextImage" class="carousel-btn next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="project-details-info">
+                    <h2 id="projectTitle"></h2>
+                    <p id="projectDescription"></p>
+                    <div class="project-details-meta">
+                        <div class="meta-item">
+                            <h4>Technologies Used</h4>
+                            <div id="projectTechs" class="tech-list"></div>
+                        </div>
+                        <div class="meta-item">
+                            <h4>Project Highlights</h4>
+                            <ul id="projectHighlights" class="highlights-list"></ul>
+                        </div>
+                    </div>
+                    <div class="project-cta">
+                        <a href="#contact" class="cta-button">Get in Touch</a>
+                        <a href="#" id="githubBtn" class="cta-button github-btn" target="_blank" style="display: none;">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Design</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fab fa-adobe"></i>
+                                    <span class="skill-name">Adobe Creative Suite</span>
+                                </div>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fab fa-figma"></i>
+                                    <span class="skill-name">Figma</span>
+                                </div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fas fa-pen-nib"></i>
+                                    <span class="skill-name">UI/UX Design</span>
+                                </div>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fas fa-star"></i>
+                                    <span class="skill-name">Branding</span>
+                                </div>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fas fa-font"></i>
+                                    <span class="skill-name">Typography</span>
+                                </div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fas fa-palette"></i>
+                                    <span class="skill-name">Color Theory</span>
+                                </div>
+                                <span class="skill-percent">87%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 87%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fab fa-html5"></i>
+                                    <span class="skill-name">HTML/CSS</span>
+                                </div>
+                                <span class="skill-percent">93%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 93%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fab fa-js"></i>
+                                    <span class="skill-name">JavaScript</span>
+                                </div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fab fa-react"></i>
+                                    <span class="skill-name">React</span>
+                                </div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fab fa-python"></i>
+                                    <span class="skill-name">Python</span>
+                                </div>
+                                <span class="skill-percent">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fas fa-database"></i>
+                                    <span class="skill-name">SQL</span>
+                                </div>
+                                <span class="skill-percent">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fas fa-globe"></i>
+                                    <span class="skill-name">Web Design</span>
+                                </div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Administration</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fas fa-chart-bar"></i>
+                                    <span class="skill-name">Project Management</span>
+                                </div>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fas fa-calendar"></i>
+                                    <span class="skill-name">Scheduling</span>
+                                </div>
+                                <span class="skill-percent">91%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 91%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fas fa-comments"></i>
+                                    <span class="skill-name">Communication</span>
+                                </div>
+                                <span class="skill-percent">94%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 94%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fas fa-file-alt"></i>
+                                    <span class="skill-name">Documentation</span>
+                                </div>
+                                <span class="skill-percent">86%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 86%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fas fa-folder"></i>
+                                    <span class="skill-name">Data Organization</span>
+                                </div>
+                                <span class="skill-percent">89%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 89%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name-with-icon">
+                                    <i class="skill-icon fas fa-cog"></i>
+                                    <span class="skill-name">CRM Systems</span>
+                                </div>
+                                <span class="skill-percent">84%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 84%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <p><strong>Email:</strong> guiribaaedrian183@gmail.com</p>
+                        <p><strong>Phone:</strong> +639757436621</p>
+                        <p><strong>Location:</strong> Philippines</p>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Your Portfolio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
