@@ -94,12 +94,15 @@ const viewBtns = document.querySelectorAll('.view-btn');
 const projectData = {
     'Brand Identity System': {
         images: [
-            'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop',
-            'https://images.unsplash.com/photo-1516259651218-b88b0d3a0a30?w=600&h=400&fit=crop',
-            'https://images.unsplash.com/photo-1561737404-cd4628902d4a?w=600&h=400&fit=crop'
+            '/assets/4.jpg',
+            '/assets/5.jpg',
+            '/assets/6.jpg',
+            '/assets/lanscape blue.png',
+            '/assets/etiketa.jpg',
+            '/assets/frontpage.jpg'
         ],
         description: 'Created a comprehensive brand identity package for a tech startup including logo design, color palette, typography guidelines, and complete brand applications across digital and print media.',
-        technologies: ['Adobe Illustrator', 'Adobe InDesign', 'Figma', 'Branding'],
+        technologies: ['Adobe Illustrator', 'Adobe Photoshop', 'Figma', 'Canva'],
         highlights: [
             'Logo design with multiple variations',
             'Complete color palette system',
@@ -108,36 +111,36 @@ const projectData = {
             'Marketing collateral templates'
         ]
     },
-    'Mobile App Interface': {
+    'Illustrations': {
         images: [
-            'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=400&fit=crop',
-            'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop',
-            'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop'
+            'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=400&fit=crop',
+            'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&h=400&fit=crop',
+            'https://images.unsplash.com/photo-1618172193622-ae2d025f4032?w=600&h=400&fit=crop'
         ],
-        description: 'Designed user-centered UI/UX for a fitness tracking mobile application with intuitive navigation, modern aesthetics, and comprehensive user testing.',
-        technologies: ['Figma', 'UI/UX Design', 'User Research', 'Prototyping'],
+        description: 'Crafted vibrant vector illustrations blending bold color blocking, expressive characters, and clean geometric forms for editorial, web, and social media use.',
+        technologies: ['Illustrator', 'Procreate', 'Figma', 'Color Theory'],
         highlights: [
-            'User persona and journey mapping',
-            'Wireframe design and prototyping',
-            'High-fidelity UI mockups',
-            'Responsive design system',
-            'User testing and iterations'
+            'Character-driven spot and hero illustrations',
+            'Scalable vector artwork optimized for web and print',
+            'Layered source files for easy recolor and adaptation',
+            'Consistent visual language across a multi-asset set',
+            'Accessible palettes with strong contrast and clarity'
         ]
     },
-    'Marketing Campaign': {
+    'Posters': {
         images: [
-            'https://images.unsplash.com/photo-1561737404-cd4628902d4a?w=600&h=400&fit=crop',
-            'https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop',
-            'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop'
+            'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
+            'https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?w=600&h=400&fit=crop',
+            'https://images.unsplash.com/photo-1509281373149-e957c6296406?w=600&h=400&fit=crop'
         ],
-        description: 'Comprehensive marketing design suite including social media graphics, posters, email templates, and promotional materials for brand awareness campaign.',
-        technologies: ['Adobe Photoshop', 'Adobe Premiere Pro', 'Canva', 'Social Media'],
+        description: 'Designed vibrant and impactful posters for events, campaigns, and promotions featuring bold typography, strategic color use, and compelling visual hierarchy to grab attention and communicate messages effectively.',
+        technologies: ['Adobe Photoshop', 'Adobe Illustrator', 'Typography', 'Print Design'],
         highlights: [
-            'Social media graphics (Instagram, Facebook, Twitter)',
-            'Email campaign templates',
-            'Promotional posters and banners',
-            'Video thumbnail designs',
-            'Print-ready materials'
+            'Event and concert posters with bold visual impact',
+            'Promotional campaign posters for product launches',
+            'Large-format print designs optimized for visibility',
+            'Typography-driven layouts with strong hierarchy',
+            'Color theory application for maximum engagement'
         ]
     },
     'E-commerce Platform': {
@@ -331,75 +334,8 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ========== Contact Form =========
-// Initialize EmailJS
-emailjs.init('eEncx5Rf9-Ljtnlmy');
-
-const contactForm = document.querySelector('.contact-form');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const nameInput = contactForm.querySelector('input[type="text"]');
-        const emailInput = contactForm.querySelector('input[type="email"]');
-        const messageInput = contactForm.querySelector('textarea');
-        
-        const inputs = contactForm.querySelectorAll('input, textarea');
-        const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-        
-        if (allFilled) {
-            // Show loading state
-            const submitBtn = contactForm.querySelector('.submit-btn');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            // Send email using EmailJS
-            emailjs.send('service_k39oawr', 'eEncx5Rf9-Ljtnlmy', {
-                from_name: nameInput.value,
-                from_email: emailInput.value,
-                message: messageInput.value,
-                to_email: 'guiribaaedrian183@gmail.com'
-            })
-            .then(
-                (response) => {
-                    // Show success message
-                    const successMsg = document.createElement('div');
-                    successMsg.className = 'form-success';
-                    successMsg.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
-                    contactForm.appendChild(successMsg);
-                    
-                    // Clear form
-                    contactForm.reset();
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    
-                    // Remove success message after 3 seconds
-                    setTimeout(() => {
-                        successMsg.remove();
-                    }, 3000);
-                },
-                (error) => {
-                    // Show error message
-                    const errorMsg = document.createElement('div');
-                    errorMsg.className = 'form-error';
-                    errorMsg.textContent = '✗ Error sending message. Please try again.';
-                    contactForm.appendChild(errorMsg);
-                    
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    
-                    // Remove error message after 3 seconds
-                    setTimeout(() => {
-                        errorMsg.remove();
-                    }, 3000);
-                    
-                    console.error('EmailJS error:', error);
-                }
-            );
-        }
-    });
-}
+// FormSubmit handles the form submission automatically
+// No additional JavaScript needed
 
 // ========== Scroll Animations =========
 const observerOptions = {
@@ -566,31 +502,43 @@ style.textContent = `
 document.head.appendChild(style);
 
 // ========== Resume Modal ==========
-const resumeBtn = document.getElementById('resumeBtn');
-const closeResumeBtn = document.getElementById('closeResumeBtn');
-const resumeModal = document.getElementById('resumeModal');
-const resumeModalOverlay = document.querySelector('.resume-modal-overlay');
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+    const resumeBtn = document.getElementById('resumeBtn');
+    const closeResumeBtn = document.getElementById('closeResumeBtn');
+    const resumeModal = document.getElementById('resumeModal');
+    const resumeModalOverlay = document.querySelector('.resume-modal-overlay');
 
-// Open Resume Modal
-resumeBtn.addEventListener('click', () => {
-    resumeModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-});
-
-// Close Resume Modal
-function closeResumeModal() {
-    resumeModal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
-
-closeResumeBtn.addEventListener('click', closeResumeModal);
-resumeModalOverlay.addEventListener('click', closeResumeModal);
-
-// Close modal on Escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && resumeModal.classList.contains('active')) {
-        closeResumeModal();
+    if (resumeBtn) {
+        resumeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (resumeModal) {
+                resumeModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
     }
+
+    function closeResumeModal() {
+        if (resumeModal) {
+            resumeModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    if (closeResumeBtn) {
+        closeResumeBtn.addEventListener('click', closeResumeModal);
+    }
+
+    if (resumeModalOverlay) {
+        resumeModalOverlay.addEventListener('click', closeResumeModal);
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && resumeModal && resumeModal.classList.contains('active')) {
+            closeResumeModal();
+        }
+    });
 });
 
 // ========== Skill Progress Animation ==========
@@ -621,3 +569,40 @@ function animateSkills() {
 window.addEventListener('scroll', animateSkills);
 // Trigger animation on page load if skills section is visible
 animateSkills();
+
+// ========== Email Success Notification =========
+window.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = 'email-success-notification';
+        notification.innerHTML = `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>Email successfully sent!</span>
+            <button class="close-notification">&times;</button>
+        `;
+        document.body.appendChild(notification);
+
+        // Show notification
+        setTimeout(() => notification.classList.add('show'), 100);
+
+        // Auto-hide after 5 seconds
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 300);
+            // Remove success parameter from URL
+            window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+        }, 5000);
+
+        // Close button
+        notification.querySelector('.close-notification').addEventListener('click', () => {
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 300);
+            window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+        });
+    }
+});

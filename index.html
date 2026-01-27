@@ -90,9 +90,14 @@
                 <div class="resume-wrapper">
                     <!-- Resume Header -->
                     <div class="resume-header-section">
-                        <div class="resume-title-block">
-                            <h1 class="resume-name">Aedrian Guiriba</h1>
-                            <p class="resume-title-text">IT Specialist • Software Developer • Graphic Designer • College Instructor</p>
+                        <div class="resume-header-top">
+                            <div class="resume-photo-container">
+                                <img src="../assets/formal picture.jpg" alt="Aedrian Guiriba" class="resume-photo">
+                            </div>
+                            <div class="resume-title-block">
+                                <h1 class="resume-name">Aedrian Guiriba</h1>
+                                <p class="resume-title-text">IT Specialist • Software Developer • Graphic Designer • College Instructor</p>
+                            </div>
                         </div>
                         <div class="resume-contact-info">
                             <p><strong>Email:</strong> guiribaaedrian183@gmail.com</p>
@@ -270,32 +275,32 @@
 
                 <div class="portfolio-item design" data-category="design">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&h=300&fit=crop" alt="UI/UX Design">
+                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=300&fit=crop" alt="Illustrations">
                         <div class="overlay">
                             <button class="view-btn">View Details</button>
                         </div>
                     </div>
-                    <h3>Mobile App Interface</h3>
-                    <p>User-centered UI/UX design for a fitness tracking mobile application with intuitive navigation and modern aesthetics.</p>
+                    <h3>Illustrations</h3>
+                    <p>Whimsical digital illustrations with bold palettes, clean line work, and character-driven storytelling for web and print.</p>
                     <div class="project-tags">
-                        <span class="tag">Figma</span>
-                        <span class="tag">UI/UX</span>
-                        <span class="tag">Mobile Design</span>
+                        <span class="tag">Illustration</span>
+                        <span class="tag">Vector</span>
+                        <span class="tag">Digital Art</span>
                     </div>
                 </div>
 
                 <div class="portfolio-item design" data-category="design">
                     <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1561737404-cd4628902d4a?w=400&h=300&fit=crop" alt="Marketing Materials">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Poster Design">
                         <div class="overlay">
                             <button class="view-btn">View Details</button>
                         </div>
                     </div>
-                    <h3>Marketing Campaign</h3>
-                    <p>Comprehensive marketing design suite including social media graphics, posters, and promotional materials for brand awareness.</p>
+                    <h3>Posters</h3>
+                    <p>Eye-catching poster designs for events, campaigns, and promotions with bold typography and striking visual hierarchy.</p>
                     <div class="project-tags">
-                        <span class="tag">Adobe Creative</span>
-                        <span class="tag">Social Media</span>
+                        <span class="tag">Poster Design</span>
+                        <span class="tag">Typography</span>
                         <span class="tag">Print Design</span>
                     </div>
                 </div>
@@ -667,17 +672,21 @@
                     </div>
                 </div>
 
-                <form class="contact-form">
+                <form class="contact-form" action="https://formsubmit.co/guiribaaedrian183@gmail.com" method="POST">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send Message</button>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/portfolio/index.html?success=true#contact">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_subject" value="Portfolio Inquiry">
                 </form>
             </div>
         </div>
