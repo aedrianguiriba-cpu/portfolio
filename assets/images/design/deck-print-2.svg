@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Deck and Print Slide Set</title>
+  <desc id="desc">Presentation slide set and print collateral layout.</desc>
+  <rect width="1200" height="800" fill="#101725"/>
+  <rect x="90" y="90" width="1020" height="620" rx="22" fill="#f4f7ff"/>
+  <rect x="140" y="140" width="420" height="260" rx="16" fill="#1f5c92"/>
+  <text x="180" y="230" fill="#fff" font-family="Arial" font-size="38" font-weight="700">Quarterly Deck</text>
+  <rect x="590" y="140" width="470" height="260" rx="16" fill="#f0a322"/>
+  <text x="630" y="230" fill="#1f2739" font-family="Arial" font-size="38" font-weight="700">Print Brochure</text>
+  <rect x="140" y="430" width="920" height="230" rx="16" fill="#ffffff" stroke="#d8d0c4"/>
+  <line x1="180" y1="490" x2="1020" y2="490" stroke="#d8d0c4" stroke-width="8"/>
+  <line x1="180" y1="560" x2="920" y2="560" stroke="#d8d0c4" stroke-width="8"/>
+</svg>

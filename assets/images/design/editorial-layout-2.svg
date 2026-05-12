@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Editorial Spread Concept</title>
+  <desc id="desc">Magazine editorial spread concept with image and body copy columns.</desc>
+  <rect width="1200" height="800" fill="#f7f2e8"/>
+  <rect x="70" y="70" width="1060" height="660" rx="20" fill="#fff" stroke="#d8d0c4"/>
+  <rect x="120" y="120" width="430" height="560" rx="14" fill="#dbe6f3"/>
+  <rect x="590" y="120" width="490" height="100" rx="10" fill="#0f4f74"/>
+  <text x="630" y="182" fill="#f6f2e8" font-family="Arial" font-size="36" font-weight="700">Editorial Feature</text>
+  <line x1="610" y1="270" x2="1060" y2="270" stroke="#c9ced8" stroke-width="8"/>
+  <line x1="610" y1="320" x2="1030" y2="320" stroke="#c9ced8" stroke-width="8"/>
+  <line x1="610" y1="370" x2="1060" y2="370" stroke="#c9ced8" stroke-width="8"/>
+  <line x1="610" y1="420" x2="980" y2="420" stroke="#c9ced8" stroke-width="8"/>
+  <line x1="610" y1="500" x2="1060" y2="500" stroke="#c9ced8" stroke-width="8"/>
+  <line x1="610" y1="550" x2="1000" y2="550" stroke="#c9ced8" stroke-width="8"/>
+</svg>

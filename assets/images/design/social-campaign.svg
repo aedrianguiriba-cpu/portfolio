@@ -1,0 +1,13 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F1E7D8"/>
+  <rect x="80" y="90" width="1040" height="720" rx="42" fill="#FFF9EF" stroke="#20242F" stroke-width="8"/>
+  <rect x="138" y="146" width="348" height="608" rx="28" fill="#C74735"/>
+  <circle cx="313" cy="315" r="112" fill="#F6D37D"/>
+  <rect x="560" y="188" width="452" height="64" rx="32" fill="#173D69"/>
+  <rect x="560" y="286" width="344" height="26" rx="13" fill="#6C7A89"/>
+  <rect x="560" y="344" width="390" height="26" rx="13" fill="#6C7A89"/>
+  <rect x="560" y="430" width="430" height="112" rx="24" fill="#F4B53F"/>
+  <rect x="560" y="578" width="208" height="118" rx="24" fill="#173D69"/>
+  <rect x="804" y="578" width="208" height="118" rx="24" fill="#C74735"/>
+  <text x="138" y="78" fill="#20242F" font-family="Arial, sans-serif" font-size="42" font-weight="700">Social Campaign Layout</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Glassmorphism Editorial Layout</title>
+  <desc id="desc">An editorial concept featuring layered glass cards and modern typography.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a2740"/>
+      <stop offset="100%" stop-color="#0a121f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="260" cy="170" r="130" fill="#3df6ff" fill-opacity="0.25"/>
+  <circle cx="930" cy="620" r="170" fill="#fc4f9a" fill-opacity="0.2"/>
+  <rect x="90" y="90" width="1020" height="620" rx="32" fill="#ffffff" fill-opacity="0.1" stroke="#cfe1ff" stroke-opacity="0.5"/>
+  <rect x="140" y="140" width="420" height="520" rx="20" fill="#ffffff" fill-opacity="0.15" stroke="#dff3ff"/>
+  <rect x="610" y="140" width="450" height="120" rx="16" fill="#ffffff" fill-opacity="0.18" stroke="#dff3ff"/>
+  <text x="650" y="215" fill="#f3f8ff" font-family="Arial" font-size="40" font-weight="700">Glass Editorial</text>
+  <line x1="630" y1="310" x2="1030" y2="310" stroke="#d7e6ff" stroke-width="8"/>
+  <line x1="630" y1="360" x2="1050" y2="360" stroke="#d7e6ff" stroke-width="8"/>
+  <line x1="630" y1="410" x2="980" y2="410" stroke="#d7e6ff" stroke-width="8"/>
+  <line x1="630" y1="490" x2="1050" y2="490" stroke="#d7e6ff" stroke-width="8"/>
+  <line x1="630" y1="540" x2="1000" y2="540" stroke="#d7e6ff" stroke-width="8"/>
+  <line x1="630" y1="590" x2="1030" y2="590" stroke="#d7e6ff" stroke-width="8"/>
+</svg>

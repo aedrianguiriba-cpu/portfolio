@@ -1,0 +1,11 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#0F4F74"/>
+  <circle cx="229" cy="229" r="145" fill="#F4B53F"/>
+  <rect x="420" y="148" width="556" height="94" rx="47" fill="#F7F2E8"/>
+  <rect x="420" y="286" width="422" height="42" rx="21" fill="#BFD3E3"/>
+  <rect x="120" y="478" width="960" height="262" rx="34" fill="#123A58" stroke="#F7F2E8" stroke-width="8"/>
+  <rect x="168" y="528" width="314" height="154" rx="22" fill="#F7F2E8"/>
+  <rect x="518" y="528" width="225" height="154" rx="22" fill="#F4B53F"/>
+  <rect x="779" y="528" width="253" height="154" rx="22" fill="#BFD3E3"/>
+  <text x="120" y="98" fill="#F7F2E8" font-family="Arial, sans-serif" font-size="42" font-weight="700">Brand Identity System</text>
+</svg>

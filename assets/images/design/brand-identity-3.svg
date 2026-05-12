@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Brand Identity Application Mockup</title>
+  <desc id="desc">A brand system mockup showing stationery and social avatar applications.</desc>
+  <rect width="1200" height="800" fill="#e9dfcf"/>
+  <rect x="80" y="80" width="1040" height="640" rx="24" fill="#ffffff"/>
+  <rect x="130" y="130" width="310" height="520" rx="18" fill="#0f4f74"/>
+  <circle cx="285" cy="245" r="95" fill="#f0a322"/>
+  <text x="245" y="255" fill="#20242f" font-family="Arial" font-size="46" font-weight="800">AG</text>
+  <rect x="500" y="130" width="560" height="160" rx="16" fill="#f6f1e7" stroke="#d8d0c4"/>
+  <text x="540" y="200" fill="#20242f" font-family="Arial" font-size="42" font-weight="700">Stationery Set</text>
+  <rect x="500" y="320" width="260" height="330" rx="16" fill="#f8f4eb" stroke="#d8d0c4"/>
+  <rect x="800" y="320" width="260" height="330" rx="16" fill="#20242f"/>
+  <text x="540" y="385" fill="#4d5568" font-family="Arial" font-size="26">Letterhead</text>
+  <text x="540" y="430" fill="#4d5568" font-family="Arial" font-size="26">Business Card</text>
+  <text x="540" y="475" fill="#4d5568" font-family="Arial" font-size="26">Email Signature</text>
+  <text x="845" y="500" fill="#f6f1e7" font-family="Arial" font-size="34" font-weight="700">Social Avatar</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Social Campaign Carousel</title>
+  <desc id="desc">Carousel concept for a social media campaign with multiple cards.</desc>
+  <rect width="1200" height="800" fill="#17202c"/>
+  <text x="90" y="105" fill="#f4f7ff" font-family="Arial" font-size="44" font-weight="700">Campaign Carousel</text>
+  <g transform="translate(90 150)">
+    <rect width="300" height="520" rx="20" fill="#f6f2e8"/>
+    <rect x="30" y="35" width="240" height="180" rx="12" fill="#c74735"/>
+    <text x="30" y="265" fill="#20242f" font-family="Arial" font-size="32" font-weight="700">Launch Day</text>
+  </g>
+  <g transform="translate(450 150)">
+    <rect width="300" height="520" rx="20" fill="#f6f2e8"/>
+    <rect x="30" y="35" width="240" height="180" rx="12" fill="#f0a322"/>
+    <text x="30" y="265" fill="#20242f" font-family="Arial" font-size="32" font-weight="700">Feature Story</text>
+  </g>
+  <g transform="translate(810 150)">
+    <rect width="300" height="520" rx="20" fill="#f6f2e8"/>
+    <rect x="30" y="35" width="240" height="180" rx="12" fill="#0f4f74"/>
+    <text x="30" y="265" fill="#20242f" font-family="Arial" font-size="32" font-weight="700">Call to Action</text>
+  </g>
+</svg>

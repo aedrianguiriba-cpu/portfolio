@@ -1,0 +1,14 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F8F1E5"/>
+  <rect x="96" y="96" width="1008" height="708" rx="32" fill="#FFFDF8" stroke="#20242F" stroke-width="8"/>
+  <rect x="150" y="152" width="444" height="540" rx="24" fill="#173D69"/>
+  <rect x="644" y="152" width="406" height="170" rx="24" fill="#F4B53F"/>
+  <rect x="644" y="356" width="406" height="336" rx="24" fill="#F2E7D5"/>
+  <rect x="706" y="214" width="282" height="24" rx="12" fill="#FFFDF8"/>
+  <rect x="706" y="258" width="238" height="18" rx="9" fill="#FFF3D2"/>
+  <rect x="706" y="414" width="290" height="20" rx="10" fill="#173D69"/>
+  <rect x="706" y="458" width="252" height="16" rx="8" fill="#7A8795"/>
+  <rect x="706" y="496" width="290" height="16" rx="8" fill="#7A8795"/>
+  <rect x="706" y="534" width="264" height="16" rx="8" fill="#7A8795"/>
+  <text x="150" y="76" fill="#20242F" font-family="Arial, sans-serif" font-size="42" font-weight="700">Editorial Layout Concept</text>
+</svg>

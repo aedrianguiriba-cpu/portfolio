@@ -1,0 +1,16 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#E7EDF4"/>
+  <rect x="112" y="122" width="420" height="616" rx="22" fill="#FFFCF7" stroke="#20242F" stroke-width="8"/>
+  <rect x="618" y="168" width="470" height="220" rx="28" fill="#173D69"/>
+  <rect x="618" y="430" width="470" height="308" rx="28" fill="#FFFCF7" stroke="#20242F" stroke-width="8"/>
+  <rect x="170" y="206" width="300" height="34" rx="17" fill="#173D69"/>
+  <rect x="170" y="274" width="210" height="20" rx="10" fill="#A8B7C5"/>
+  <rect x="170" y="324" width="266" height="20" rx="10" fill="#A8B7C5"/>
+  <rect x="170" y="394" width="304" height="238" rx="18" fill="#F4B53F"/>
+  <circle cx="854" cy="278" r="78" fill="#F4B53F"/>
+  <rect x="668" y="492" width="216" height="26" rx="13" fill="#173D69"/>
+  <rect x="668" y="548" width="340" height="18" rx="9" fill="#A8B7C5"/>
+  <rect x="668" y="590" width="296" height="18" rx="9" fill="#A8B7C5"/>
+  <rect x="668" y="632" width="322" height="18" rx="9" fill="#A8B7C5"/>
+  <text x="112" y="84" fill="#20242F" font-family="Arial, sans-serif" font-size="42" font-weight="700">Deck and Print Presentation</text>
+</svg>

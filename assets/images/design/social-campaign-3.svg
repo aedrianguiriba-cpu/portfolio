@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Social Campaign Story Frames</title>
+  <desc id="desc">Story format frames for social campaign communication.</desc>
+  <rect width="1200" height="800" fill="#f3e7d2"/>
+  <text x="80" y="100" fill="#20242f" font-family="Arial" font-size="42" font-weight="700">Story Frames</text>
+  <g transform="translate(80 140)">
+    <rect width="230" height="560" rx="28" fill="#20242f"/>
+    <rect x="20" y="30" width="190" height="500" rx="18" fill="#fff"/>
+  </g>
+  <g transform="translate(360 140)">
+    <rect width="230" height="560" rx="28" fill="#0f4f74"/>
+    <rect x="20" y="30" width="190" height="500" rx="18" fill="#fff"/>
+  </g>
+  <g transform="translate(640 140)">
+    <rect width="230" height="560" rx="28" fill="#c74735"/>
+    <rect x="20" y="30" width="190" height="500" rx="18" fill="#fff"/>
+  </g>
+  <g transform="translate(920 140)">
+    <rect width="200" height="560" rx="28" fill="#f0a322"/>
+    <rect x="18" y="30" width="164" height="500" rx="18" fill="#fff"/>
+  </g>
+</svg>

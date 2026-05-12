@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Liquid Deck and Print</title>
+  <desc id="desc">A liquid gradient style slide and print layout with bold composition.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#142b4f"/>
+    </linearGradient>
+    <linearGradient id="blob1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#41f4d9"/>
+      <stop offset="100%" stop-color="#2b8fff"/>
+    </linearGradient>
+    <linearGradient id="blob2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff8a47"/>
+      <stop offset="100%" stop-color="#ff3d7c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <ellipse cx="320" cy="230" rx="220" ry="140" fill="url(#blob1)"/>
+  <ellipse cx="880" cy="560" rx="260" ry="160" fill="url(#blob2)"/>
+  <rect x="120" y="120" width="960" height="560" rx="30" fill="#f5f8ff" stroke="#7d8cff"/>
+  <rect x="180" y="180" width="420" height="210" rx="18" fill="#102038"/>
+  <text x="220" y="265" fill="#d8e4ff" font-family="Arial" font-size="42" font-weight="700">Pitch Deck</text>
+  <rect x="640" y="180" width="380" height="210" rx="18" fill="#1f5c92"/>
+  <text x="680" y="265" fill="#f3fbff" font-family="Arial" font-size="42" font-weight="700">Print Kit</text>
+  <line x1="190" y1="470" x2="1010" y2="470" stroke="#c7cfdf" stroke-width="9"/>
+  <line x1="190" y1="535" x2="930" y2="535" stroke="#c7cfdf" stroke-width="9"/>
+  <line x1="190" y1="600" x2="980" y2="600" stroke="#c7cfdf" stroke-width="9"/>
+</svg>
