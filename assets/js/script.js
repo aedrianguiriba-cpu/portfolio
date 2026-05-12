@@ -32,6 +32,308 @@ document.querySelectorAll('.reveal').forEach((section) => {
   observer.observe(section);
 });
 
+// Touch-friendly flip toggle for tool cards
+document.querySelectorAll('.tool-card').forEach((card) => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('is-flipped');
+  });
+});
+
+function initAssistantCalendar() {
+  const calendars = document.querySelectorAll('[data-assistant-calendar]');
+  if (!calendars.length) {
+    return;
+  }
+
+  calendars.forEach((calendar) => {
+    const monthLabel = calendar.querySelector('[data-calendar-month]');
+    const todayLabel = calendar.querySelector('[data-calendar-today]');
+    const grid = calendar.querySelector('[data-calendar-grid]');
+    if (!monthLabel || !todayLabel || !grid) {
+      return;
+    }
+
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth();
+    const today = now.getDate();
+    const firstDayIndex = (new Date(year, month, 1).getDay() + 6) % 7;
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const daysInPrevMonth = new Date(year, month, 0).getDate();
+    const totalCells = Math.ceil((firstDayIndex + daysInMonth) / 7) * 7;
+
+    monthLabel.textContent = now.toLocaleDateString('en-US', {
+      month: 'long',
+      year: 'numeric'
+    });
+    todayLabel.textContent = String(today);
+
+    const dayCells = [];
+
+    for (let i = 0; i < firstDayIndex; i += 1) {
+      dayCells.push(`<span class="assistant-calendar-day is-muted">${daysInPrevMonth - firstDayIndex + i + 1}</span>`);
+    }
+
+    for (let day = 1; day <= daysInMonth; day += 1) {
+      const todayClass = day === today ? ' is-today' : '';
+      dayCells.push(`<span class="assistant-calendar-day${todayClass}">${day}</span>`);
+    }
+
+    let nextMonthDay = 1;
+    while (dayCells.length < totalCells) {
+      dayCells.push(`<span class="assistant-calendar-day is-muted">${nextMonthDay}</span>`);
+      nextMonthDay += 1;
+    }
+
+    grid.innerHTML = dayCells.join('');
+  });
+}
+
+initAssistantCalendar();
+
+function initDinoGame() {
+  const gameScenes = document.querySelectorAll('[data-dino-game]');
+  if (!gameScenes.length) {
+    return;
+  }
+
+  gameScenes.forEach((scene) => {
+    const card = scene.closest('.dino-game-card');
+    const scoreEl = card ? card.querySelector('[data-dino-score]') : null;
+    const restartButton = card ? card.querySelector('[data-dino-restart]') : null;
+    const messageEl = scene.querySelector('[data-dino-message]');
+    const characterEl = scene.querySelector('[data-dino-character]');
+    const obstacleLayer = scene.querySelector('[data-dino-obstacles]');
+
+    if (!scoreEl || !restartButton || !messageEl || !characterEl || !obstacleLayer) {
+      return;
+    }
+
+    const state = {
+      running: false,
+      gameOver: false,
+      score: 0,
+      speed: 260,
+      jumpVelocity: 610,
+      gravity: 1700,
+      y: 0,
+      vy: 0,
+      lastTime: 0,
+      obstacleTimer: 0,
+      groundOffset: 0,
+      obstacles: []
+    };
+
+    const dinoMetrics = {
+      x: 28,
+      width: 40,
+      height: 30,
+      groundBottom: 21
+    };
+
+    function updateScore() {
+      scoreEl.textContent = Math.floor(state.score).toString().padStart(5, '0');
+    }
+
+    function clearObstacles() {
+      state.obstacles.forEach((obstacle) => obstacle.el.remove());
+      state.obstacles = [];
+    }
+
+    function resetGame() {
+      state.running = false;
+      state.gameOver = false;
+      state.score = 0;
+      state.speed = 260;
+      state.y = 0;
+      state.vy = 0;
+      state.lastTime = 0;
+      state.obstacleTimer = 700;
+      state.groundOffset = 0;
+      clearObstacles();
+      characterEl.style.transform = 'translateY(0px)';
+      characterEl.classList.remove('is-running');
+      scene.style.setProperty('--ground-offset', '0px');
+      messageEl.hidden = false;
+      messageEl.textContent = 'Press Space / Tap to Start';
+      restartButton.hidden = true;
+      updateScore();
+    }
+
+    function spawnObstacle() {
+      const obstacle = document.createElement('span');
+      obstacle.className = 'dino-obstacle';
+
+      const tall = Math.random() > 0.45;
+      const width = tall ? 11 : 17;
+      const height = tall ? 25 : 18;
+
+      obstacle.style.width = `${width}px`;
+      obstacle.style.height = `${height}px`;
+
+      const x = scene.clientWidth + 12;
+      obstacle.style.left = `${x}px`;
+
+      obstacleLayer.appendChild(obstacle);
+      state.obstacles.push({ el: obstacle, x, width, height });
+    }
+
+    function setMessage(text) {
+      messageEl.hidden = false;
+      messageEl.textContent = text;
+    }
+
+    function startGame() {
+      if (state.running || state.gameOver) {
+        return;
+      }
+
+      state.running = true;
+      messageEl.hidden = true;
+      characterEl.classList.add('is-running');
+    }
+
+    function jump() {
+      if (state.gameOver) {
+        return;
+      }
+
+      startGame();
+
+      if (state.y <= 0.5) {
+        state.vy = state.jumpVelocity;
+      }
+    }
+
+    function endGame() {
+      state.running = false;
+      state.gameOver = true;
+      characterEl.classList.remove('is-running');
+      setMessage('Game Over');
+      restartButton.hidden = false;
+    }
+
+    function collidesWithDino(obstacle) {
+      const sceneHeight = scene.clientHeight;
+      const dinoLeft = dinoMetrics.x + 3;
+      const dinoRight = dinoMetrics.x + dinoMetrics.width - 3;
+      const dinoTop = sceneHeight - (dinoMetrics.groundBottom + state.y + dinoMetrics.height) + 2;
+      const dinoBottom = sceneHeight - (dinoMetrics.groundBottom + state.y) - 1;
+
+      const obsLeft = obstacle.x + 1;
+      const obsRight = obstacle.x + obstacle.width - 1;
+      const obsTop = sceneHeight - (dinoMetrics.groundBottom + obstacle.height);
+      const obsBottom = sceneHeight - dinoMetrics.groundBottom;
+
+      return dinoLeft < obsRight && dinoRight > obsLeft && dinoTop < obsBottom && dinoBottom > obsTop;
+    }
+
+    function updateFrame(timestamp) {
+      if (!state.lastTime) {
+        state.lastTime = timestamp;
+      }
+
+      const delta = Math.min((timestamp - state.lastTime) / 1000, 0.04);
+      state.lastTime = timestamp;
+
+      if (state.running) {
+        state.score += delta * 70;
+        state.speed = Math.min(520, state.speed + delta * 5);
+        updateScore();
+
+        state.groundOffset -= state.speed * delta;
+        scene.style.setProperty('--ground-offset', `${state.groundOffset}px`);
+
+        state.vy -= state.gravity * delta;
+        state.y += state.vy * delta;
+        if (state.y <= 0) {
+          state.y = 0;
+          state.vy = 0;
+          characterEl.classList.add('is-running');
+        } else {
+          characterEl.classList.remove('is-running');
+        }
+
+        characterEl.style.transform = `translateY(${-state.y}px)`;
+
+        state.obstacleTimer -= delta * 1000;
+        if (state.obstacleTimer <= 0) {
+          spawnObstacle();
+          const spawnBase = Math.max(500, 1200 - state.speed);
+          state.obstacleTimer = spawnBase + Math.random() * 420;
+        }
+
+        state.obstacles.forEach((obstacle) => {
+          obstacle.x -= state.speed * delta;
+          obstacle.el.style.left = `${obstacle.x}px`;
+        });
+
+        state.obstacles = state.obstacles.filter((obstacle) => {
+          if (obstacle.x + obstacle.width < -8) {
+            obstacle.el.remove();
+            return false;
+          }
+
+          if (!state.gameOver && collidesWithDino(obstacle)) {
+            endGame();
+          }
+
+          return true;
+        });
+      }
+
+      requestAnimationFrame(updateFrame);
+    }
+
+    function handleGameControl(event) {
+      if (!['Space', 'ArrowUp'].includes(event.code)) {
+        return;
+      }
+
+      const panel = document.querySelector('#panel-development');
+      const isDevelopmentPanelActive = panel && panel.classList.contains('active');
+      if (!isDevelopmentPanelActive) {
+        return;
+      }
+
+      const targetTag = (event.target && event.target.tagName) || '';
+      if (targetTag === 'INPUT' || targetTag === 'TEXTAREA') {
+        return;
+      }
+
+      event.preventDefault();
+      jump();
+    }
+
+    scene.addEventListener('click', () => {
+      scene.focus();
+      jump();
+    });
+
+    scene.addEventListener('keydown', (event) => {
+      if (!['Space', 'ArrowUp'].includes(event.code)) {
+        return;
+      }
+
+      event.preventDefault();
+      jump();
+    });
+
+    restartButton.addEventListener('click', () => {
+      resetGame();
+      startGame();
+      jump();
+    });
+
+    document.addEventListener('keydown', handleGameControl);
+
+    resetGame();
+    requestAnimationFrame(updateFrame);
+  });
+}
+
+initDinoGame();
+
 const panelLinks = document.querySelectorAll('.nav a[data-panel]');
 const panels = document.querySelectorAll('.main-panel');
 const mainBox = document.querySelector('#main-box');
@@ -80,6 +382,40 @@ if (panelLinks.length && panels.length && mainBox) {
   });
 }
 
+const repoLanguageLogos = {
+  JavaScript: 'javascript',
+  TypeScript: 'typescript',
+  HTML: 'html5',
+  CSS: 'css',
+  PHP: 'php',
+  Python: 'python',
+  Dart: 'dart',
+  Vue: 'vuedotjs',
+  'C#': 'csharp',
+  Java: 'openjdk',
+  Shell: 'gnubash',
+  'C++': 'cplusplus',
+  C: 'c',
+  Go: 'go',
+  Kotlin: 'kotlin',
+  Swift: 'swift',
+  Ruby: 'ruby',
+  Rust: 'rust'
+};
+
+function getRepoLanguageLogo(language) {
+  if (!language) {
+    return 'https://cdn.simpleicons.org/git';
+  }
+
+  const slug = repoLanguageLogos[language];
+  if (!slug) {
+    return 'https://cdn.simpleicons.org/codeforces';
+  }
+
+  return `https://cdn.simpleicons.org/${slug}`;
+}
+
 async function loadGitHubRepos() {
   const repoContainers = document.querySelectorAll('[data-github-repos]');
 
@@ -91,7 +427,7 @@ async function loadGitHubRepos() {
 
     container.innerHTML = '<p class="github-note">Loading repositories...</p>';
 
-    fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6&direction=desc`)
+    fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100&direction=desc`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Unable to load repositories');
@@ -100,7 +436,7 @@ async function loadGitHubRepos() {
         return response.json();
       })
       .then((repos) => {
-        const visibleRepos = repos.filter((repo) => !repo.fork).slice(0, 3);
+        const visibleRepos = repos;
 
         if (!visibleRepos.length) {
           container.innerHTML = '<p class="github-note">No public repositories found.</p>';
@@ -112,12 +448,18 @@ async function loadGitHubRepos() {
             const description = repo.description || 'No description provided.';
             const language = repo.language || 'Code';
             const stars = repo.stargazers_count || 0;
+            const languageLogo = getRepoLanguageLogo(repo.language);
 
             return `
               <a class="repo-card" href="${repo.html_url}" target="_blank" rel="noreferrer">
                 <strong>${repo.name}</strong>
                 <span>${description}</span>
-                <small>${language} · ${stars} star${stars === 1 ? '' : 's'}</small>
+                <small class="repo-meta">
+                  <span class="repo-language">
+                    <img class="repo-language-logo" src="${languageLogo}" alt="${language} logo" loading="lazy" />${language}
+                  </span>
+                  <span>${stars} star${stars === 1 ? '' : 's'}</span>
+                </small>
               </a>
             `;
           })

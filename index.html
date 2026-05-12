@@ -22,7 +22,7 @@
     <main id="home" class="bento-layout">
       <aside class="tile tile-nav reveal">
         <a class="brand" href="#home">AEDRIAN GUIRIBA</a>
-        <p class="nav-caption">Bento Navigation</p>
+        <p class="nav-caption">Portfolio</p>
         <nav id="main-nav" class="nav" aria-label="Primary">
           <a href="#main-box" data-panel="overview" class="active">Overview</a>
           <a href="#main-box" data-panel="design">Design</a>
@@ -36,7 +36,7 @@
       <section id="main-box" class="tile tile-mainbox reveal">
         <article id="panel-overview" class="main-panel active">
           <p class="kicker">Creative + Technical Portfolio</p>
-          <h1>Welcome to my bento portfolio.</h1>
+          <h1>Welcome to my portfolio BITCHES.</h1>
           <p>
             Graphic design, software development, and virtual assistant support arranged in one
             interactive main box.
@@ -110,8 +110,32 @@
             <h2>Software Development</h2>
             <span class="pill">Mobile + Web</span>
           </div>
-          <div class="dev-github-grid">
-            <article class="mini-card github-card github-calendar-card">
+          <div class="dev-bento">
+            <article class="mini-card dino-game-card dev-span-2">
+              <div class="dino-head">
+                <h3>Doggie Run</h3>
+                <span class="dino-badge">Playable</span>
+              </div>
+              <div class="dino-ui" aria-hidden="true">
+                <span class="dino-score" data-dino-score>00000</span>
+                <button class="dino-restart" type="button" data-dino-restart hidden>Restart</button>
+              </div>
+              <div class="dino-scene" data-dino-game tabindex="0" role="button" aria-label="Chrome style dinosaur runner. Press Space, Arrow Up, or tap to jump.">
+                <span class="dino-cloud dino-cloud-one"></span>
+                <span class="dino-cloud dino-cloud-two"></span>
+                <span class="dino-character" data-dino-character aria-hidden="true">
+                  <span class="dino-eye"></span>
+                  <span class="dino-arm"></span>
+                  <span class="dino-jaw"></span>
+                  <span class="dino-leg dino-leg-front"></span>
+                  <span class="dino-leg dino-leg-back"></span>
+                </span>
+                <span class="dino-obstacles" data-dino-obstacles aria-hidden="true"></span>
+                <span class="dino-message" data-dino-message>Press Space / Tap to Start</span>
+                <span class="dino-ground"></span>
+              </div>
+            </article>
+            <article class="mini-card github-card github-calendar-card dev-span-2">
               <h3>GitHub Contributions</h3>
               <div class="github-calendar-wrap">
                 <img
@@ -123,7 +147,7 @@
               </div>
               <p class="github-note">Live contribution calendar for aedrianguiriba-cpu.</p>
             </article>
-            <article class="mini-card github-card">
+            <article class="mini-card github-card dev-span-4">
               <h3>GitHub Repositories</h3>
               <div class="github-repos-grid" data-github-repos data-github-username="aedrianguiriba-cpu"></div>
             </article>
@@ -135,11 +159,67 @@
             <h2>Virtual Assistant</h2>
             <span class="pill">Operations</span>
           </div>
-          <ul class="task-list">
-            <li>Calendar and email management</li>
-            <li>Research and documentation</li>
-            <li>Client follow-up and CRM updates</li>
-          </ul>
+          <div class="assistant-bento">
+            <article class="mini-card assistant-card assistant-intro span-2">
+              <h3>Operations Snapshot</h3>
+              <p>I organize daily operations with clear priorities, documented workflows, and reliable follow-through.</p>
+            </article>
+            <article class="mini-card assistant-card assistant-tasks span-1">
+              <h3>Core Tasks</h3>
+              <ul class="task-list">
+                <li>Calendar and email management</li>
+                <li>Research and documentation</li>
+                <li>Client follow-up and CRM updates</li>
+              </ul>
+            </article>
+            <article class="mini-card assistant-card assistant-calendar-card span-1">
+              <h3>Schedule View</h3>
+              <div class="assistant-calendar" data-assistant-calendar>
+                <div class="assistant-calendar-head">
+                  <p class="assistant-calendar-month" data-calendar-month>Month Year</p>
+                  <span class="assistant-calendar-today">Today <strong data-calendar-today>--</strong></span>
+                </div>
+                <div class="assistant-calendar-weekdays" aria-hidden="true">
+                  <span>Mon</span>
+                  <span>Tue</span>
+                  <span>Wed</span>
+                  <span>Thu</span>
+                  <span>Fri</span>
+                  <span>Sat</span>
+                  <span>Sun</span>
+                </div>
+                <div class="assistant-calendar-grid" data-calendar-grid></div>
+              </div>
+            </article>
+            <article class="mini-card assistant-card assistant-metrics span-1">
+              <h3>Service Metrics</h3>
+              <div class="assistant-stats">
+                <article class="assistant-stat-card">
+                  <strong>&lt; 2h</strong>
+                  <span>Average response turnaround</span>
+                </article>
+                <article class="assistant-stat-card">
+                  <strong>40+</strong>
+                  <span>Tasks coordinated weekly</span>
+                </article>
+                <article class="assistant-stat-card">
+                  <strong>99%</strong>
+                  <span>Schedule accuracy target</span>
+                </article>
+              </div>
+            </article>
+            <article class="mini-card assistant-card assistant-tags-card span-3">
+              <h3>Capabilities</h3>
+              <div class="assistant-tags" aria-label="Virtual assistant capabilities">
+                <span>Inbox Triage</span>
+                <span>Meeting Briefs</span>
+                <span>Travel Planning</span>
+                <span>CRM Hygiene</span>
+                <span>SOP Documentation</span>
+                <span>Client Follow-ups</span>
+              </div>
+            </article>
+          </div>
         </article>
 
         <article id="panel-resume" class="main-panel">
@@ -306,11 +386,52 @@
           <h2>Virtual Assistant</h2>
           <span class="pill">Operations</span>
         </div>
+        <div class="assistant-calendar" data-assistant-calendar>
+          <div class="assistant-calendar-head">
+            <p class="assistant-calendar-month" data-calendar-month>Month Year</p>
+            <span class="assistant-calendar-today">Today <strong data-calendar-today>--</strong></span>
+          </div>
+          <div class="assistant-calendar-weekdays" aria-hidden="true">
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+            <span>Sun</span>
+          </div>
+          <div class="assistant-calendar-grid" data-calendar-grid></div>
+        </div>
         <ul class="task-list">
           <li>Calendar and email management</li>
           <li>Research and documentation</li>
           <li>Client follow-up and CRM updates</li>
         </ul>
+        <div class="assistant-content">
+          <p class="assistant-blurb">I organize daily operations with clear priorities, documented workflows, and reliable follow-through.</p>
+          <div class="assistant-stats">
+            <article class="assistant-stat-card">
+              <strong>&lt; 2h</strong>
+              <span>Average response turnaround</span>
+            </article>
+            <article class="assistant-stat-card">
+              <strong>40+</strong>
+              <span>Tasks coordinated weekly</span>
+            </article>
+            <article class="assistant-stat-card">
+              <strong>99%</strong>
+              <span>Schedule accuracy target</span>
+            </article>
+          </div>
+          <div class="assistant-tags" aria-label="Virtual assistant capabilities">
+            <span>Inbox Triage</span>
+            <span>Meeting Briefs</span>
+            <span>Travel Planning</span>
+            <span>CRM Hygiene</span>
+            <span>SOP Documentation</span>
+            <span>Client Follow-ups</span>
+          </div>
+        </div>
       </section>
 
       <section id="resume" class="tile tile-resume reveal">
@@ -381,32 +502,236 @@
         </form>
       </section>
 
-      <section class="tile tile-partners reveal">
-        <h2>Tool Stack</h2>
+      <section class="tile tile-stack tile-stack-design reveal">
+        <h2>Design</h2>
         <div class="chips">
           <article class="tool-card">
-            <strong>Figma</strong>
-            <span class="tool-level expert">Expert</span>
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/figma" alt="Figma logo" />
+                <strong>Figma</strong>
+              </div>
+              <div class="tool-card-back expert">
+                <span class="back-tool-name">Figma</span>
+                <span class="back-level-label">Expert</span>
+              </div>
+            </div>
           </article>
           <article class="tool-card">
-            <strong>Photoshop</strong>
-            <span class="tool-level advanced">Advanced</span>
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/adobeillustrator" alt="Adobe Illustrator logo" />
+                <strong>Adobe Illustrator</strong>
+              </div>
+              <div class="tool-card-back expert">
+                <span class="back-tool-name">Adobe Illustrator</span>
+                <span class="back-level-label">Expert</span>
+              </div>
+            </div>
           </article>
           <article class="tool-card">
-            <strong>React</strong>
-            <span class="tool-level advanced">Advanced</span>
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/adobephotoshop" alt="Photoshop logo" />
+                <strong>Photoshop</strong>
+              </div>
+              <div class="tool-card-back advanced">
+                <span class="back-tool-name">Photoshop</span>
+                <span class="back-level-label">Advanced</span>
+              </div>
+            </div>
           </article>
           <article class="tool-card">
-            <strong>Flutter</strong>
-            <span class="tool-level intermediate">Intermediate</span>
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/canva" alt="Canva logo" />
+                <strong>Canva</strong>
+              </div>
+              <div class="tool-card-back expert">
+                <span class="back-tool-name">Canva</span>
+                <span class="back-level-label">Expert</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="tile tile-stack tile-stack-video reveal">
+        <h2>Video &amp; Media</h2>
+        <div class="chips">
+          <article class="tool-card">
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/adobepremierepro" alt="Adobe Premiere Pro logo" />
+                <strong>Adobe Premiere Pro</strong>
+              </div>
+              <div class="tool-card-back advanced">
+                <span class="back-tool-name">Adobe Premiere Pro</span>
+                <span class="back-level-label">Advanced</span>
+              </div>
+            </div>
           </article>
           <article class="tool-card">
-            <strong>Notion</strong>
-            <span class="tool-level expert">Expert</span>
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/capcut" alt="CapCut logo" />
+                <strong>CapCut</strong>
+              </div>
+              <div class="tool-card-back advanced">
+                <span class="back-tool-name">CapCut</span>
+                <span class="back-level-label">Advanced</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="tile tile-stack tile-stack-vcs reveal">
+        <h2>Version Control</h2>
+        <div class="chips">
+          <article class="tool-card">
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/github" alt="GitHub logo" />
+                <strong>GitHub</strong>
+              </div>
+              <div class="tool-card-back advanced">
+                <span class="back-tool-name">GitHub</span>
+                <span class="back-level-label">Advanced</span>
+              </div>
+            </div>
           </article>
           <article class="tool-card">
-            <strong>Google Workspace</strong>
-            <span class="tool-level advanced">Advanced</span>
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/git" alt="Git logo" />
+                <strong>Git</strong>
+              </div>
+              <div class="tool-card-back advanced">
+                <span class="back-tool-name">Git</span>
+                <span class="back-level-label">Advanced</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="tile tile-stack tile-stack-dev reveal">
+        <h2>Development</h2>
+        <div class="chips">
+          <article class="tool-card">
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/html5" alt="HTML logo" />
+                <strong>HTML</strong>
+              </div>
+              <div class="tool-card-back expert">
+                <span class="back-tool-name">HTML</span>
+                <span class="back-level-label">Expert</span>
+              </div>
+            </div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/css" alt="CSS logo" />
+                <strong>CSS</strong>
+              </div>
+              <div class="tool-card-back expert">
+                <span class="back-tool-name">CSS</span>
+                <span class="back-level-label">Expert</span>
+              </div>
+            </div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/javascript" alt="JavaScript logo" />
+                <strong>JavaScript</strong>
+              </div>
+              <div class="tool-card-back expert">
+                <span class="back-tool-name">JavaScript</span>
+                <span class="back-level-label">Expert</span>
+              </div>
+            </div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/php" alt="PHP logo" />
+                <strong>PHP</strong>
+              </div>
+              <div class="tool-card-back advanced">
+                <span class="back-tool-name">PHP</span>
+                <span class="back-level-label">Advanced</span>
+              </div>
+            </div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/flutter" alt="Flutter logo" />
+                <strong>Flutter</strong>
+              </div>
+              <div class="tool-card-back intermediate">
+                <span class="back-tool-name">Flutter</span>
+                <span class="back-level-label">Intermediate</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="tile tile-stack tile-stack-productivity reveal">
+        <h2>Productivity</h2>
+        <div class="chips">
+          <article class="tool-card">
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/microsoftoffice" alt="Microsoft Office logo" />
+                <strong>MS Office</strong>
+              </div>
+              <div class="tool-card-back expert">
+                <span class="back-tool-name">MS Office</span>
+                <span class="back-level-label">Expert</span>
+              </div>
+            </div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/googleworkspace" alt="Google Workspace logo" />
+                <strong>Google Workspace</strong>
+              </div>
+              <div class="tool-card-back advanced">
+                <span class="back-tool-name">Google Workspace</span>
+                <span class="back-level-label">Advanced</span>
+              </div>
+            </div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/trello" alt="Trello logo" />
+                <strong>Trello</strong>
+              </div>
+              <div class="tool-card-back advanced">
+                <span class="back-tool-name">Trello</span>
+                <span class="back-level-label">Advanced</span>
+              </div>
+            </div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-card-inner">
+              <div class="tool-card-front">
+                <img class="tool-logo" src="https://cdn.simpleicons.org/youtrack" alt="YouTrack logo" />
+                <strong>YouTrack</strong>
+              </div>
+              <div class="tool-card-back advanced">
+                <span class="back-tool-name">YouTrack</span>
+                <span class="back-level-label">Advanced</span>
+              </div>
+            </div>
           </article>
         </div>
       </section>
