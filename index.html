@@ -29,21 +29,28 @@
           <a href="#main-box" data-panel="development">Development</a>
           <a href="#main-box" data-panel="assistant">Assistant</a>
           <a href="#main-box" data-panel="resume">Resume</a>
-          <a href="#main-box" data-panel="contact">Contact</a>
+          <a href="#main-box" data-panel="tools">Skills &amp; Tools</a>
         </nav>
       </aside>
 
       <section id="main-box" class="tile tile-mainbox reveal">
         <article id="panel-overview" class="main-panel active">
-          <p class="kicker">Creative + Technical Portfolio</p>
-          <h1>Welcome to my portfolio BITCHES.</h1>
-          <p>
-            Graphic design, software development, and virtual assistant support arranged in one
-            interactive main box.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#main-box" data-panel-jump="contact">Start a Project</a>
-            <a class="btn btn-secondary" href="#main-box" data-panel-jump="resume">Open Resume</a>
+          <div class="overview-layout">
+            <div class="overview-text">
+              <p class="kicker">Creative &amp; Technical Professional</p>
+              <h1>Design.<br>Build.<br>Support.</h1>
+              <p class="overview-bio">
+                I'm Aedrian — a multi-discipline creative who bridges visual design, software
+                development, and virtual assistant work into one cohesive practice.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#main-box" data-panel-jump="resume">View Resume</a>
+                <a class="btn btn-secondary" href="#main-box" data-panel-jump="design">See My Work</a>
+              </div>
+            </div>
+            <div class="overview-photo">
+              <img src="assets/images/myself.png" alt="Aedrian Guiriba" />
+            </div>
           </div>
         </article>
 
@@ -106,12 +113,22 @@
         </article>
 
         <article id="panel-development" class="main-panel">
-          <div class="tile-head">
-            <h2>Software Development</h2>
-            <span class="pill">Mobile + Web</span>
+          <div class="dev-panel-head">
+            <div class="tile-head">
+              <h2>Software Development</h2>
+              <span class="pill">Mobile + Web</span>
+            </div>
+            <div class="dev-stack-tags">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Python</span>
+            </div>
           </div>
           <div class="dev-bento">
-            <article class="mini-card dino-game-card dev-span-2">
+            <article class="mini-card dino-game-card dev-span-2 dev-card-mint">
               <div class="dino-head">
                 <h3>Doggie Run</h3>
                 <span class="dino-badge">Playable</span>
@@ -135,7 +152,7 @@
                 <span class="dino-ground"></span>
               </div>
             </article>
-            <article class="mini-card github-card github-calendar-card dev-span-2">
+            <article class="mini-card github-card github-calendar-card dev-span-2 dev-card-lavender">
               <h3>GitHub Contributions</h3>
               <div class="github-calendar-wrap">
                 <img
@@ -145,10 +162,13 @@
                   loading="lazy"
                 />
               </div>
-              <p class="github-note">Live contribution calendar for aedrianguiriba-cpu.</p>
+              <p class="github-note">Live calendar &mdash; aedrianguiriba-cpu</p>
             </article>
-            <article class="mini-card github-card dev-span-4">
-              <h3>GitHub Repositories</h3>
+            <article class="mini-card github-card dev-span-4 dev-card-peach">
+              <div class="dev-repos-head">
+                <h3>GitHub Repositories</h3>
+                <a class="dev-gh-link" href="https://github.com/aedrianguiriba-cpu" target="_blank" rel="noopener">View all ↗</a>
+              </div>
               <div class="github-repos-grid" data-github-repos data-github-username="aedrianguiriba-cpu"></div>
             </article>
           </div>
@@ -271,26 +291,85 @@
           </div>
         </article>
 
-        <article id="panel-contact" class="main-panel">
+        <article id="panel-tools" class="main-panel">
           <div class="tile-head">
-            <h2>Contact</h2>
-            <span class="pill">Available</span>
+            <h2>Skills &amp; Tools</h2>
+            <span class="pill">My Stack</span>
           </div>
-          <form class="contact-form" action="#" method="post">
-            <label>
-              Name
-              <input type="text" name="name" required />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" required />
-            </label>
-            <label>
-              Project Details
-              <textarea name="message" rows="4" required></textarea>
-            </label>
-            <button class="btn btn-secondary" type="submit">Send Message</button>
-          </form>
+          <div class="tools-container">
+            <div class="tools-category" data-category="design">
+              <button class="tools-category-header" type="button">
+                <span class="tools-category-name">Design</span>
+                <span class="tools-category-count">4</span>
+                <span class="tools-category-toggle">▼</span>
+              </button>
+              <div class="tools-category-content">
+                <div class="chips">
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/figma" alt="Figma logo" /><strong>Figma</strong></div><div class="tool-card-back expert"><span class="back-tool-name">Figma</span><span class="back-level-label">Expert</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/adobeillustrator" alt="Adobe Illustrator logo" /><strong>Adobe Illustrator</strong></div><div class="tool-card-back expert"><span class="back-tool-name">Adobe Illustrator</span><span class="back-level-label">Expert</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/adobephotoshop" alt="Photoshop logo" /><strong>Photoshop</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">Photoshop</span><span class="back-level-label">Advanced</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/canva" alt="Canva logo" /><strong>Canva</strong></div><div class="tool-card-back expert"><span class="back-tool-name">Canva</span><span class="back-level-label">Expert</span></div></div></article>
+                </div>
+              </div>
+            </div>
+            <div class="tools-category" data-category="video">
+              <button class="tools-category-header" type="button">
+                <span class="tools-category-name">Video &amp; Media</span>
+                <span class="tools-category-count">2</span>
+                <span class="tools-category-toggle">▼</span>
+              </button>
+              <div class="tools-category-content">
+                <div class="chips">
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/adobepremierepro" alt="Adobe Premiere Pro logo" /><strong>Adobe Premiere Pro</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">Adobe Premiere Pro</span><span class="back-level-label">Advanced</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/capcut" alt="CapCut logo" /><strong>CapCut</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">CapCut</span><span class="back-level-label">Advanced</span></div></div></article>
+                </div>
+              </div>
+            </div>
+            <div class="tools-category" data-category="vcs">
+              <button class="tools-category-header" type="button">
+                <span class="tools-category-name">Version Control</span>
+                <span class="tools-category-count">2</span>
+                <span class="tools-category-toggle">▼</span>
+              </button>
+              <div class="tools-category-content">
+                <div class="chips">
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/github" alt="GitHub logo" /><strong>GitHub</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">GitHub</span><span class="back-level-label">Advanced</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/git" alt="Git logo" /><strong>Git</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">Git</span><span class="back-level-label">Advanced</span></div></div></article>
+                </div>
+              </div>
+            </div>
+            <div class="tools-category" data-category="development">
+              <button class="tools-category-header" type="button">
+                <span class="tools-category-name">Development</span>
+                <span class="tools-category-count">5</span>
+                <span class="tools-category-toggle">▼</span>
+              </button>
+              <div class="tools-category-content">
+                <div class="chips">
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/html5" alt="HTML logo" /><strong>HTML</strong></div><div class="tool-card-back expert"><span class="back-tool-name">HTML</span><span class="back-level-label">Expert</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/css" alt="CSS logo" /><strong>CSS</strong></div><div class="tool-card-back expert"><span class="back-tool-name">CSS</span><span class="back-level-label">Expert</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/javascript" alt="JavaScript logo" /><strong>JavaScript</strong></div><div class="tool-card-back expert"><span class="back-tool-name">JavaScript</span><span class="back-level-label">Expert</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/php" alt="PHP logo" /><strong>PHP</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">PHP</span><span class="back-level-label">Advanced</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/flutter" alt="Flutter logo" /><strong>Flutter</strong></div><div class="tool-card-back intermediate"><span class="back-tool-name">Flutter</span><span class="back-level-label">Intermediate</span></div></div></article>
+                </div>
+              </div>
+            </div>
+            <div class="tools-category" data-category="productivity">
+              <button class="tools-category-header" type="button">
+                <span class="tools-category-name">Productivity</span>
+                <span class="tools-category-count">4</span>
+                <span class="tools-category-toggle">▼</span>
+              </button>
+              <div class="tools-category-content">
+                <div class="chips">
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/microsoftoffice" alt="Microsoft Office logo" /><strong>MS Office</strong></div><div class="tool-card-back expert"><span class="back-tool-name">MS Office</span><span class="back-level-label">Expert</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/googleworkspace" alt="Google Workspace logo" /><strong>Google Workspace</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">Google Workspace</span><span class="back-level-label">Advanced</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/trello" alt="Trello logo" /><strong>Trello</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">Trello</span><span class="back-level-label">Advanced</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/youtrack" alt="YouTrack logo" /><strong>YouTrack</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">YouTrack</span><span class="back-level-label">Advanced</span></div></div></article>
+                </div>
+              </div>
+            </div>
+          </div>
         </article>
       </section>
 
@@ -480,259 +559,274 @@
         </div>
       </section>
 
-      <section id="contact" class="tile tile-contact reveal">
+      <section id="tools-section" class="tile tile-tools reveal">
         <div class="tile-head">
-          <h2>Contact</h2>
-          <span class="pill">Available</span>
+          <h2>Skills & Tools</h2>
         </div>
-        <form class="contact-form" action="#" method="post">
-          <label>
-            Name
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" required />
-          </label>
-          <label>
-            Project Details
-            <textarea name="message" rows="4" required></textarea>
-          </label>
-          <button class="btn btn-secondary" type="submit">Send Message</button>
-        </form>
-      </section>
+        <div class="tools-container">
+          <div class="tools-category" data-category="design">
+            <button class="tools-category-header" type="button">
+              <span class="tools-category-name">Design</span>
+              <span class="tools-category-count">4</span>
+              <span class="tools-category-toggle">▼</span>
+            </button>
+            <div class="tools-category-content">
+              <div class="chips">
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/figma" alt="Figma logo" />
+                      <strong>Figma</strong>
+                    </div>
+                    <div class="tool-card-back expert">
+                      <span class="back-tool-name">Figma</span>
+                      <span class="back-level-label">Expert</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/adobeillustrator" alt="Adobe Illustrator logo" />
+                      <strong>Adobe Illustrator</strong>
+                    </div>
+                    <div class="tool-card-back expert">
+                      <span class="back-tool-name">Adobe Illustrator</span>
+                      <span class="back-level-label">Expert</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/adobephotoshop" alt="Photoshop logo" />
+                      <strong>Photoshop</strong>
+                    </div>
+                    <div class="tool-card-back advanced">
+                      <span class="back-tool-name">Photoshop</span>
+                      <span class="back-level-label">Advanced</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/canva" alt="Canva logo" />
+                      <strong>Canva</strong>
+                    </div>
+                    <div class="tool-card-back expert">
+                      <span class="back-tool-name">Canva</span>
+                      <span class="back-level-label">Expert</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
 
-      <section class="tile tile-stack tile-stack-design reveal">
-        <h2>Design</h2>
-        <div class="chips">
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/figma" alt="Figma logo" />
-                <strong>Figma</strong>
-              </div>
-              <div class="tool-card-back expert">
-                <span class="back-tool-name">Figma</span>
-                <span class="back-level-label">Expert</span>
-              </div>
-            </div>
-          </article>
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/adobeillustrator" alt="Adobe Illustrator logo" />
-                <strong>Adobe Illustrator</strong>
-              </div>
-              <div class="tool-card-back expert">
-                <span class="back-tool-name">Adobe Illustrator</span>
-                <span class="back-level-label">Expert</span>
-              </div>
-            </div>
-          </article>
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/adobephotoshop" alt="Photoshop logo" />
-                <strong>Photoshop</strong>
-              </div>
-              <div class="tool-card-back advanced">
-                <span class="back-tool-name">Photoshop</span>
-                <span class="back-level-label">Advanced</span>
+          <div class="tools-category" data-category="video">
+            <button class="tools-category-header" type="button">
+              <span class="tools-category-name">Video & Media</span>
+              <span class="tools-category-count">2</span>
+              <span class="tools-category-toggle">▼</span>
+            </button>
+            <div class="tools-category-content">
+              <div class="chips">
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/adobepremierepro" alt="Adobe Premiere Pro logo" />
+                      <strong>Adobe Premiere Pro</strong>
+                    </div>
+                    <div class="tool-card-back advanced">
+                      <span class="back-tool-name">Adobe Premiere Pro</span>
+                      <span class="back-level-label">Advanced</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/capcut" alt="CapCut logo" />
+                      <strong>CapCut</strong>
+                    </div>
+                    <div class="tool-card-back advanced">
+                      <span class="back-tool-name">CapCut</span>
+                      <span class="back-level-label">Advanced</span>
+                    </div>
+                  </div>
+                </article>
               </div>
             </div>
-          </article>
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/canva" alt="Canva logo" />
-                <strong>Canva</strong>
-              </div>
-              <div class="tool-card-back expert">
-                <span class="back-tool-name">Canva</span>
-                <span class="back-level-label">Expert</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
+          </div>
 
-      <section class="tile tile-stack tile-stack-video reveal">
-        <h2>Video &amp; Media</h2>
-        <div class="chips">
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/adobepremierepro" alt="Adobe Premiere Pro logo" />
-                <strong>Adobe Premiere Pro</strong>
-              </div>
-              <div class="tool-card-back advanced">
-                <span class="back-tool-name">Adobe Premiere Pro</span>
-                <span class="back-level-label">Advanced</span>
+          <div class="tools-category" data-category="vcs">
+            <button class="tools-category-header" type="button">
+              <span class="tools-category-name">Version Control</span>
+              <span class="tools-category-count">2</span>
+              <span class="tools-category-toggle">▼</span>
+            </button>
+            <div class="tools-category-content">
+              <div class="chips">
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/github" alt="GitHub logo" />
+                      <strong>GitHub</strong>
+                    </div>
+                    <div class="tool-card-back advanced">
+                      <span class="back-tool-name">GitHub</span>
+                      <span class="back-level-label">Advanced</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/git" alt="Git logo" />
+                      <strong>Git</strong>
+                    </div>
+                    <div class="tool-card-back advanced">
+                      <span class="back-tool-name">Git</span>
+                      <span class="back-level-label">Advanced</span>
+                    </div>
+                  </div>
+                </article>
               </div>
             </div>
-          </article>
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/capcut" alt="CapCut logo" />
-                <strong>CapCut</strong>
-              </div>
-              <div class="tool-card-back advanced">
-                <span class="back-tool-name">CapCut</span>
-                <span class="back-level-label">Advanced</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
+          </div>
 
-      <section class="tile tile-stack tile-stack-vcs reveal">
-        <h2>Version Control</h2>
-        <div class="chips">
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/github" alt="GitHub logo" />
-                <strong>GitHub</strong>
-              </div>
-              <div class="tool-card-back advanced">
-                <span class="back-tool-name">GitHub</span>
-                <span class="back-level-label">Advanced</span>
+          <div class="tools-category" data-category="development">
+            <button class="tools-category-header" type="button">
+              <span class="tools-category-name">Development</span>
+              <span class="tools-category-count">5</span>
+              <span class="tools-category-toggle">▼</span>
+            </button>
+            <div class="tools-category-content">
+              <div class="chips">
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/html5" alt="HTML logo" />
+                      <strong>HTML</strong>
+                    </div>
+                    <div class="tool-card-back expert">
+                      <span class="back-tool-name">HTML</span>
+                      <span class="back-level-label">Expert</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/css" alt="CSS logo" />
+                      <strong>CSS</strong>
+                    </div>
+                    <div class="tool-card-back expert">
+                      <span class="back-tool-name">CSS</span>
+                      <span class="back-level-label">Expert</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/javascript" alt="JavaScript logo" />
+                      <strong>JavaScript</strong>
+                    </div>
+                    <div class="tool-card-back expert">
+                      <span class="back-tool-name">JavaScript</span>
+                      <span class="back-level-label">Expert</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/php" alt="PHP logo" />
+                      <strong>PHP</strong>
+                    </div>
+                    <div class="tool-card-back advanced">
+                      <span class="back-tool-name">PHP</span>
+                      <span class="back-level-label">Advanced</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/flutter" alt="Flutter logo" />
+                      <strong>Flutter</strong>
+                    </div>
+                    <div class="tool-card-back intermediate">
+                      <span class="back-tool-name">Flutter</span>
+                      <span class="back-level-label">Intermediate</span>
+                    </div>
+                  </div>
+                </article>
               </div>
             </div>
-          </article>
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/git" alt="Git logo" />
-                <strong>Git</strong>
-              </div>
-              <div class="tool-card-back advanced">
-                <span class="back-tool-name">Git</span>
-                <span class="back-level-label">Advanced</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
+          </div>
 
-      <section class="tile tile-stack tile-stack-dev reveal">
-        <h2>Development</h2>
-        <div class="chips">
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/html5" alt="HTML logo" />
-                <strong>HTML</strong>
-              </div>
-              <div class="tool-card-back expert">
-                <span class="back-tool-name">HTML</span>
-                <span class="back-level-label">Expert</span>
-              </div>
-            </div>
-          </article>
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/css" alt="CSS logo" />
-                <strong>CSS</strong>
-              </div>
-              <div class="tool-card-back expert">
-                <span class="back-tool-name">CSS</span>
-                <span class="back-level-label">Expert</span>
-              </div>
-            </div>
-          </article>
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/javascript" alt="JavaScript logo" />
-                <strong>JavaScript</strong>
-              </div>
-              <div class="tool-card-back expert">
-                <span class="back-tool-name">JavaScript</span>
-                <span class="back-level-label">Expert</span>
-              </div>
-            </div>
-          </article>
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/php" alt="PHP logo" />
-                <strong>PHP</strong>
-              </div>
-              <div class="tool-card-back advanced">
-                <span class="back-tool-name">PHP</span>
-                <span class="back-level-label">Advanced</span>
-              </div>
-            </div>
-          </article>
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/flutter" alt="Flutter logo" />
-                <strong>Flutter</strong>
-              </div>
-              <div class="tool-card-back intermediate">
-                <span class="back-tool-name">Flutter</span>
-                <span class="back-level-label">Intermediate</span>
+          <div class="tools-category" data-category="productivity">
+            <button class="tools-category-header" type="button">
+              <span class="tools-category-name">Productivity</span>
+              <span class="tools-category-count">4</span>
+              <span class="tools-category-toggle">▼</span>
+            </button>
+            <div class="tools-category-content">
+              <div class="chips">
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/microsoftoffice" alt="Microsoft Office logo" />
+                      <strong>MS Office</strong>
+                    </div>
+                    <div class="tool-card-back expert">
+                      <span class="back-tool-name">MS Office</span>
+                      <span class="back-level-label">Expert</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/googleworkspace" alt="Google Workspace logo" />
+                      <strong>Google Workspace</strong>
+                    </div>
+                    <div class="tool-card-back advanced">
+                      <span class="back-tool-name">Google Workspace</span>
+                      <span class="back-level-label">Advanced</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/trello" alt="Trello logo" />
+                      <strong>Trello</strong>
+                    </div>
+                    <div class="tool-card-back advanced">
+                      <span class="back-tool-name">Trello</span>
+                      <span class="back-level-label">Advanced</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card-inner">
+                    <div class="tool-card-front">
+                      <img class="tool-logo" src="https://cdn.simpleicons.org/youtrack" alt="YouTrack logo" />
+                      <strong>YouTrack</strong>
+                    </div>
+                    <div class="tool-card-back advanced">
+                      <span class="back-tool-name">YouTrack</span>
+                      <span class="back-level-label">Advanced</span>
+                    </div>
+                  </div>
+                </article>
               </div>
             </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="tile tile-stack tile-stack-productivity reveal">
-        <h2>Productivity</h2>
-        <div class="chips">
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/microsoftoffice" alt="Microsoft Office logo" />
-                <strong>MS Office</strong>
-              </div>
-              <div class="tool-card-back expert">
-                <span class="back-tool-name">MS Office</span>
-                <span class="back-level-label">Expert</span>
-              </div>
-            </div>
-          </article>
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/googleworkspace" alt="Google Workspace logo" />
-                <strong>Google Workspace</strong>
-              </div>
-              <div class="tool-card-back advanced">
-                <span class="back-tool-name">Google Workspace</span>
-                <span class="back-level-label">Advanced</span>
-              </div>
-            </div>
-          </article>
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/trello" alt="Trello logo" />
-                <strong>Trello</strong>
-              </div>
-              <div class="tool-card-back advanced">
-                <span class="back-tool-name">Trello</span>
-                <span class="back-level-label">Advanced</span>
-              </div>
-            </div>
-          </article>
-          <article class="tool-card">
-            <div class="tool-card-inner">
-              <div class="tool-card-front">
-                <img class="tool-logo" src="https://cdn.simpleicons.org/youtrack" alt="YouTrack logo" />
-                <strong>YouTrack</strong>
-              </div>
-              <div class="tool-card-back advanced">
-                <span class="back-tool-name">YouTrack</span>
-                <span class="back-level-label">Advanced</span>
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
       </section>
     </main>
@@ -860,6 +954,15 @@
           <figcaption id="gallery-modal-title" data-gallery-modal-title></figcaption>
         </figure>
         <p class="gallery-modal-count" data-gallery-modal-count></p>
+      </div>
+    </div>
+
+    <div class="tools-modal" data-tools-modal aria-hidden="true">
+      <div class="tools-modal-backdrop" data-tools-modal-close></div>
+      <div class="tools-modal-dialog" role="dialog" aria-modal="true">
+        <button class="tools-modal-close" type="button" aria-label="Close tools" data-tools-modal-close>&times;</button>
+        <h2 data-tools-modal-title></h2>
+        <div class="tools-modal-grid" data-tools-modal-grid></div>
       </div>
     </div>
 

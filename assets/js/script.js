@@ -33,10 +33,17 @@ document.querySelectorAll('.reveal').forEach((section) => {
 });
 
 // Touch-friendly flip toggle for tool cards
-document.querySelectorAll('.tool-card').forEach((card) => {
-  card.addEventListener('click', () => {
-    card.classList.toggle('is-flipped');
+function attachToolCardListener(card) {
+  card.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (e.target.closest('.tool-card')) {
+      card.classList.toggle('is-flipped');
+    }
   });
+}
+
+document.querySelectorAll('.tool-card').forEach((card) => {
+  attachToolCardListener(card);
 });
 
 function initAssistantCalendar() {
@@ -685,5 +692,58 @@ document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowLeft') {
       showPreviousGallerySlide();
     }
+  }
+});
+
+// Tools categories as boxes
+const toolsModal = document.querySelector('[data-tools-modal]');
+const toolsModalClose = document.querySelector('.tools-modal-close');
+const toolsModalBackdrop = document.querySelector('.tools-modal-backdrop');
+const toolsModalGrid = document.querySelector('[data-tools-modal-grid]');
+const toolsModalTitle = document.querySelector('[data-tools-modal-title]');
+
+const toolsCategories = document.querySelectorAll('.tools-category');
+toolsCategories.forEach((category) => {
+  const header = category.querySelector('.tools-category-header');
+  const toolCards = category.querySelectorAll('.tool-card');
+  toolCards.forEach((card) => attachToolCardListener(card));
+  
+  if (header) {
+    header.addEventListener('click', () => {
+      const categoryName = category.querySelector('.tools-category-name').textContent;
+      const cards = Array.from(category.querySelectorAll('.tool-card'));
+      
+      if (toolsModalTitle) toolsModalTitle.textContent = categoryName;
+      if (toolsModalGrid) {
+        toolsModalGrid.innerHTML = '';
+        cards.forEach((card) => {
+          const clone = card.cloneNode(true);
+          toolsModalGrid.appendChild(clone);
+          attachToolCardListener(clone);
+        });
+      }
+      if (toolsModal) toolsModal.classList.add('open');
+    });
+  }
+});
+
+const closeToolsModal = () => {
+  if (toolsModal) toolsModal.classList.remove('open');
+};
+
+if (toolsModalClose) {
+  toolsModalClose.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeToolsModal();
+  });
+}
+
+if (toolsModalBackdrop) {
+  toolsModalBackdrop.addEventListener('click', closeToolsModal);
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && toolsModal && toolsModal.classList.contains('open')) {
+    closeToolsModal();
   }
 });
