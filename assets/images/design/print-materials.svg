@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Print materials portfolio board">
+  <rect width="1200" height="900" fill="#f0ebe0"/>
+
+  <!-- Title bar -->
+  <text x="80" y="72" fill="#1e2d52" font-family="Georgia,serif" font-size="40" font-weight="700">Print Materials</text>
+  <text x="80" y="106" fill="#8a8070" font-family="Arial,sans-serif" font-size="16" letter-spacing="4">POSTERS · BROCHURES · COLLATERAL</text>
+  <line x1="80" y1="124" x2="1120" y2="124" stroke="#d0c8b8" stroke-width="1.5"/>
+
+  <!-- ── POSTER (left, tall) ── -->
+  <rect x="80" y="152" width="240" height="600" rx="14" fill="#1e2d52"/>
+  <rect x="80" y="152" width="240" height="10" rx="8" fill="#e8b86d"/>
+  <!-- Poster content -->
+  <rect x="108" y="196" width="184" height="22" rx="8" fill="#ffffff" fill-opacity="0.85"/>
+  <rect x="108" y="228" width="140" height="14" rx="6" fill="#e8b86d"/>
+  <rect x="108" y="252" width="164" height="10" rx="5" fill="#ffffff" fill-opacity="0.3"/>
+  <!-- Circle graphic element -->
+  <circle cx="200" cy="430" r="100" fill="none" stroke="#e8b86d" stroke-width="2.5"/>
+  <circle cx="200" cy="430" r="66" fill="#e8b86d" fill-opacity="0.12"/>
+  <circle cx="200" cy="430" r="34" fill="#e8b86d" fill-opacity="0.22"/>
+  <circle cx="200" cy="430" r="12" fill="#e8b86d" fill-opacity="0.5"/>
+  <!-- Bottom poster text -->
+  <rect x="108" y="598" width="140" height="10" rx="5" fill="#ffffff" fill-opacity="0.5"/>
+  <rect x="108" y="618" width="184" height="8" rx="4" fill="#ffffff" fill-opacity="0.3"/>
+  <rect x="108" y="636" width="160" height="8" rx="4" fill="#ffffff" fill-opacity="0.25"/>
+  <rect x="108" y="676" width="100" height="28" rx="14" fill="#e8b86d"/>
+  <text x="158" y="695" fill="#1e2d52" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle">More Info</text>
+  <text x="200" y="728" fill="#8a7860" font-family="Arial,sans-serif" font-size="12" text-anchor="middle" letter-spacing="2">POSTER</text>
+
+  <!-- ── TRIFOLD BROCHURE (center) ── -->
+  <!-- Panel 1: Cover -->
+  <rect x="364" y="200" width="220" height="510" rx="12" fill="#1e2d52"/>
+  <rect x="382" y="232" width="184" height="18" rx="7" fill="#e8b86d"/>
+  <rect x="382" y="260" width="140" height="11" rx="5" fill="#ffffff" fill-opacity="0.5"/>
+  <rect x="382" y="281" width="160" height="11" rx="5" fill="#ffffff" fill-opacity="0.35"/>
+  <circle cx="474" cy="430" r="80" fill="#e8b86d" fill-opacity="0.15" stroke="#e8b86d" stroke-width="1.5"/>
+  <circle cx="474" cy="430" r="50" fill="#e8b86d" fill-opacity="0.12"/>
+  <rect x="390" y="560" width="168" height="34" rx="17" fill="#e8b86d"/>
+  <text x="474" y="583" fill="#1e2d52" font-family="Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle">Learn More</text>
+  <text x="474" y="678" fill="#8a7860" font-family="Arial,sans-serif" font-size="12" text-anchor="middle" letter-spacing="2">COVER</text>
+
+  <!-- Panel 2: Content -->
+  <rect x="592" y="200" width="220" height="510" rx="0" fill="#ffffff" stroke="#d0c8b8" stroke-width="1"/>
+  <rect x="610" y="232" width="184" height="14" rx="5" fill="#1e2d52"/>
+  <rect x="610" y="258" width="164" height="8" rx="4" fill="#c8c0b0"/>
+  <rect x="610" y="275" width="148" height="8" rx="4" fill="#c8c0b0"/>
+  <rect x="610" y="292" width="172" height="8" rx="4" fill="#c8c0b0"/>
+  <rect x="610" y="309" width="140" height="8" rx="4" fill="#c8c0b0"/>
+  <!-- Image placeholder -->
+  <rect x="610" y="334" width="184" height="110" rx="10" fill="#eee8d8"/>
+  <circle cx="702" cy="389" r="34" fill="#e8b86d" fill-opacity="0.3"/>
+  <!-- More text lines -->
+  <rect x="610" y="458" width="172" height="8" rx="4" fill="#c8c0b0"/>
+  <rect x="610" y="474" width="150" height="8" rx="4" fill="#c8c0b0"/>
+  <rect x="610" y="490" width="164" height="8" rx="4" fill="#c8c0b0"/>
+  <rect x="610" y="506" width="130" height="8" rx="4" fill="#c8c0b0"/>
+  <rect x="610" y="578" width="100" height="28" rx="14" fill="#1e2d52"/>
+  <text x="702" y="678" fill="#8a7860" font-family="Arial,sans-serif" font-size="12" text-anchor="middle" letter-spacing="2">INSIDE</text>
+
+  <!-- Panel 3: Back -->
+  <rect x="820" y="200" width="220" height="510" rx="12" fill="#e8b86d"/>
+  <circle cx="930" cy="380" r="90" fill="#1e2d52" fill-opacity="0.12"/>
+  <rect x="848" y="496" width="184" height="14" rx="6" fill="#1e2d52" fill-opacity="0.45"/>
+  <rect x="860" y="520" width="140" height="10" rx="5" fill="#1e2d52" fill-opacity="0.3"/>
+  <rect x="860" y="540" width="160" height="10" rx="5" fill="#1e2d52" fill-opacity="0.25"/>
+  <text x="930" y="678" fill="#8a7860" font-family="Arial,sans-serif" font-size="12" text-anchor="middle" letter-spacing="2">BACK</text>
+
+  <!-- ── BUSINESS CARD pair ── -->
+  <rect x="1060" y="200" width="320" height="190" rx="12" fill="#1e2d52"/>
+  <rect x="1060" y="200" width="5" height="190" rx="4" fill="#e8b86d"/>
+  <circle cx="1140" cy="285" r="42" fill="none" stroke="#e8b86d" stroke-width="1.5"/>
+  <rect x="1198" y="256" width="152" height="14" rx="6" fill="#e8b86d"/>
+  <rect x="1198" y="280" width="116" height="10" rx="5" fill="#ffffff" fill-opacity="0.4"/>
+  <rect x="1198" y="300" width="134" height="8" rx="4" fill="#ffffff" fill-opacity="0.3"/>
+  <rect x="1198" y="318" width="100" height="8" rx="4" fill="#ffffff" fill-opacity="0.25"/>
+  <text x="1220" y="372" fill="#8a7860" font-family="Arial,sans-serif" font-size="11" letter-spacing="2">BUSINESS CARD</text>
+
+  <!-- ── LETTERHEAD ── -->
+  <rect x="1060" y="416" width="320" height="294" rx="12" fill="#ffffff" stroke="#d0c8b8" stroke-width="1.5"/>
+  <!-- Header stripe -->
+  <rect x="1060" y="416" width="320" height="36" rx="12" fill="#1e2d52" fill-opacity="0.08"/>
+  <rect x="1060" y="416" width="320" height="5" rx="4" fill="#e8b86d"/>
+  <!-- Logo area -->
+  <circle cx="1100" cy="478" r="22" fill="none" stroke="#1e2d52" stroke-width="1.5"/>
+  <!-- Address lines -->
+  <rect x="1136" y="466" width="120" height="10" rx="4" fill="#d0c8b8"/>
+  <rect x="1136" y="484" width="96" height="8" rx="4" fill="#e0d8c8"/>
+  <!-- Body text lines -->
+  <rect x="1076" y="516" width="272" height="8" rx="4" fill="#e0d8c8"/>
+  <rect x="1076" y="532" width="250" height="8" rx="4" fill="#e0d8c8"/>
+  <rect x="1076" y="548" width="264" height="8" rx="4" fill="#e0d8c8"/>
+  <rect x="1076" y="564" width="240" height="8" rx="4" fill="#e0d8c8"/>
+  <rect x="1076" y="580" width="256" height="8" rx="4" fill="#e0d8c8"/>
+  <rect x="1076" y="596" width="228" height="8" rx="4" fill="#e0d8c8"/>
+  <rect x="1076" y="620" width="272" height="8" rx="4" fill="#e0d8c8"/>
+  <rect x="1076" y="636" width="244" height="8" rx="4" fill="#e0d8c8"/>
+  <!-- Footer line -->
+  <line x1="1076" y1="666" x2="1364" y2="666" stroke="#d0c8b8" stroke-width="1"/>
+  <rect x="1076" y="676" width="180" height="7" rx="3" fill="#e8e0d0"/>
+  <text x="1220" y="692" fill="#8a7860" font-family="Arial,sans-serif" font-size="11" text-anchor="middle" letter-spacing="2">LETTERHEAD</text>
+
+  <!-- Footer -->
+  <line x1="80" y1="810" x2="1120" y2="810" stroke="#d0c8b8" stroke-width="1"/>
+  <text x="80" y="842" fill="#8a8070" font-family="Arial,sans-serif" font-size="14" letter-spacing="3">PRINT MATERIALS — POSTERS, BROCHURES, COLLATERAL</text>
+  <text x="1120" y="842" fill="#1e2d52" font-family="Georgia,serif" font-size="18" font-weight="700" text-anchor="end">AG Studio</text>
+</svg>

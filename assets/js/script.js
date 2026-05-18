@@ -357,6 +357,14 @@ function activatePanel(panelName) {
   panelLinks.forEach((link) => {
     link.classList.toggle('active', link.dataset.panel === panelName);
   });
+
+  if (panelName === 'assistant') {
+    document.querySelectorAll('#panel-assistant .assistant-chart-fill').forEach((fill) => {
+      fill.style.animation = 'none';
+      fill.offsetHeight; // force reflow
+      fill.style.animation = '';
+    });
+  }
 }
 
 if (panelLinks.length && panels.length && mainBox) {

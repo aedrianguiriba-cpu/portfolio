@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-label="Editorial layout thumbnail">
+
+  <!-- Background (paper/cream) -->
+  <rect width="1200" height="400" fill="#faf7f0"/>
+
+  <!-- ── LEFT PAGE ── -->
+  <rect x="0" y="0" width="590" height="400" fill="#faf7f0"/>
+  <!-- Hero image block -->
+  <rect x="30" y="28" width="532" height="300" rx="10" fill="#b5ead7" fill-opacity="0.5"/>
+  <!-- Image overlay: abstract shapes -->
+  <rect x="30" y="28" width="532" height="300" rx="10" fill="#1e3a2e" fill-opacity="0.15"/>
+  <circle cx="200" cy="168" r="100" fill="#4a9e80" fill-opacity="0.22"/>
+  <circle cx="420" cy="120" r="70" fill="#b5ead7" fill-opacity="0.3"/>
+  <!-- Headline overlay on image -->
+  <rect x="44" y="248" width="500" height="64" rx="0" fill="rgba(0,0,0,0.52)"/>
+  <text x="62" y="278" fill="#ffffff" font-family="Georgia,'Times New Roman',serif" font-size="26" font-weight="700">THE ART OF</text>
+  <text x="62" y="303" fill="#b5ead7" font-family="Georgia,'Times New Roman',serif" font-size="26" font-weight="700">VISUAL SYSTEMS</text>
+  <!-- Caption strip -->
+  <rect x="30" y="330" width="532" height="20" rx="4" fill="#e0ede8"/>
+  <rect x="44" y="335" width="200" height="8" rx="4" fill="#8ab8a4"/>
+  <!-- Folio / page number -->
+  <text x="298" y="384" fill="#aaa090" font-family="Arial,sans-serif" font-size="14" text-anchor="middle" letter-spacing="2">PAGE 01</text>
+
+  <!-- ── SPINE / GUTTER ── -->
+  <line x1="600" y1="20" x2="600" y2="380" stroke="#d8cfc0" stroke-width="1.5"/>
+
+  <!-- ── RIGHT PAGE ── -->
+  <rect x="610" y="0" width="590" height="400" fill="#faf7f0"/>
+  <!-- Issue label -->
+  <text x="628" y="50" fill="#b5ead7" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="4">ISSUE 04 — 2026</text>
+  <!-- Section heading -->
+  <rect x="628" y="62" width="300" height="18" rx="6" fill="#1e3a2e" fill-opacity="0.75"/>
+  <!-- Drop cap -->
+  <text x="628" y="144" fill="#1e3a2e" font-family="Georgia,serif" font-size="76" font-weight="700">T</text>
+  <!-- Body text columns -->
+  <!-- Column A -->
+  <rect x="696" y="100" width="140" height="10" rx="5" fill="#c8c0b0"/>
+  <rect x="696" y="118" width="120" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="696" y="134" width="136" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="628" y="155" width="200" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="628" y="171" width="180" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="628" y="187" width="196" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="628" y="203" width="168" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="628" y="219" width="188" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="628" y="235" width="160" height="8" rx="4" fill="#d8d0c0"/>
+  <!-- Column B -->
+  <rect x="854" y="100" width="188" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="854" y="116" width="168" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="854" y="132" width="196" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="854" y="148" width="152" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="854" y="164" width="184" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="854" y="180" width="172" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="854" y="196" width="188" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="854" y="212" width="144" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="854" y="228" width="176" height="8" rx="4" fill="#d8d0c0"/>
+  <!-- Column C -->
+  <rect x="1076" y="100" width="108" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="1076" y="116" width="96" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="1076" y="132" width="108" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="1076" y="148" width="88" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="1076" y="164" width="100" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="1076" y="180" width="80" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="1076" y="196" width="104" height="8" rx="4" fill="#d8d0c0"/>
+  <rect x="1076" y="212" width="92" height="8" rx="4" fill="#d8d0c0"/>
+  <!-- Pull quote block -->
+  <rect x="628" y="266" width="548" height="76" rx="10" fill="#b5ead7" fill-opacity="0.28"/>
+  <rect x="628" y="266" width="4" height="76" rx="2" fill="#4a9e80"/>
+  <text x="646" y="296" fill="#1e3a2e" font-family="Georgia,serif" font-size="17" font-style="italic">"Great design is invisible —</text>
+  <text x="646" y="320" fill="#1e3a2e" font-family="Georgia,serif" font-size="17" font-style="italic">it just feels right."</text>
+  <!-- Footer rule + folio -->
+  <line x1="628" y1="358" x2="1160" y2="358" stroke="#c8c0b0" stroke-width="1"/>
+  <text x="628" y="378" fill="#aaa090" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">EDITORIAL LAYOUT</text>
+  <text x="1160" y="378" fill="#aaa090" font-family="Arial,sans-serif" font-size="14" text-anchor="end" letter-spacing="2">PAGE 02</text>
+</svg>

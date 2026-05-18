@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1200" role="img" aria-label="Deck and print thumbnail">
+
+  <!-- Background -->
+  <rect width="600" height="1200" fill="#eef3f8"/>
+
+  <!-- ── SLIDE 1 (hero) ── -->
+  <rect x="40" y="60" width="520" height="304" rx="16" fill="#ffffff" stroke="#c8d8e8" stroke-width="1.5"/>
+  <!-- Slide accent bar -->
+  <rect x="40" y="60" width="12" height="304" rx="8" fill="#a8d8ea"/>
+  <!-- Slide title -->
+  <rect x="76" y="100" width="300" height="24" rx="8" fill="#173d69"/>
+  <rect x="76" y="136" width="200" height="14" rx="7" fill="#a8d8ea"/>
+  <!-- Diagram area: abstract chart -->
+  <rect x="76" y="170" width="460" height="160" rx="12" fill="#f0f7fb"/>
+  <!-- Bar chart inside -->
+  <rect x="106" y="246" width="40" height="70" rx="6" fill="#a8d8ea"/>
+  <rect x="162" y="218" width="40" height="98" rx="6" fill="#78c0d8"/>
+  <rect x="218" y="228" width="40" height="88" rx="6" fill="#a8d8ea"/>
+  <rect x="274" y="200" width="40" height="116" rx="6" fill="#4a9ec0"/>
+  <rect x="330" y="236" width="40" height="80" rx="6" fill="#a8d8ea"/>
+  <rect x="386" y="210" width="40" height="106" rx="6" fill="#78c0d8"/>
+  <rect x="442" y="222" width="40" height="94" rx="6" fill="#a8d8ea"/>
+  <!-- Baseline -->
+  <line x1="100" y1="318" x2="496" y2="318" stroke="#c8d8e8" stroke-width="1"/>
+  <!-- Slide number -->
+  <text x="476" y="348" fill="#8aaac0" font-family="Arial,sans-serif" font-size="16" text-anchor="middle">01</text>
+
+  <!-- ── SLIDE 2 ── -->
+  <rect x="40" y="396" width="520" height="260" rx="16" fill="#ffffff" stroke="#c8d8e8" stroke-width="1.5"/>
+  <rect x="40" y="396" width="12" height="260" rx="8" fill="#78c0d8"/>
+  <!-- Two column layout inside -->
+  <rect x="76" y="428" width="220" height="196" rx="10" fill="#173d69"/>
+  <rect x="310" y="428" width="220" height="36" rx="8" fill="#e0ecf5"/>
+  <rect x="310" y="474" width="220" height="18" rx="6" fill="#c8d8e8"/>
+  <rect x="310" y="502" width="160" height="18" rx="6" fill="#c8d8e8"/>
+  <rect x="310" y="530" width="200" height="18" rx="6" fill="#c8d8e8"/>
+  <rect x="310" y="558" width="140" height="18" rx="6" fill="#c8d8e8"/>
+  <rect x="310" y="586" width="180" height="18" rx="6" fill="#c8d8e8"/>
+  <!-- Circle diagram on left panel -->
+  <circle cx="186" cy="510" r="64" fill="#a8d8ea" fill-opacity="0.25" stroke="#a8d8ea" stroke-width="2"/>
+  <circle cx="186" cy="510" r="38" fill="#a8d8ea" fill-opacity="0.4"/>
+  <text x="186" y="517" fill="#ffffff" font-family="Arial,sans-serif" font-size="18" font-weight="700" text-anchor="middle">68%</text>
+  <text x="476" y="646" fill="#8aaac0" font-family="Arial,sans-serif" font-size="16" text-anchor="middle">02</text>
+
+  <!-- ── SLIDE 3 ── -->
+  <rect x="40" y="688" width="520" height="260" rx="16" fill="#ffffff" stroke="#c8d8e8" stroke-width="1.5"/>
+  <rect x="40" y="688" width="12" height="260" rx="8" fill="#4a9ec0"/>
+  <!-- Quote slide layout -->
+  <rect x="76" y="730" width="460" height="4" rx="2" fill="#a8d8ea"/>
+  <text x="300" y="800" fill="#173d69" font-family="Georgia,serif" font-size="28" font-weight="700" text-anchor="middle">"Clear systems.</text>
+  <text x="300" y="836" fill="#173d69" font-family="Georgia,serif" font-size="28" font-weight="700" text-anchor="middle">Reliable delivery."</text>
+  <rect x="76" y="862" width="460" height="4" rx="2" fill="#a8d8ea"/>
+  <rect x="200" y="886" width="200" height="16" rx="8" fill="#e0ecf5"/>
+  <text x="476" y="930" fill="#8aaac0" font-family="Arial,sans-serif" font-size="16" text-anchor="middle">03</text>
+
+  <!-- ── PRINT COLLATERAL ── -->
+  <!-- Business card pair -->
+  <rect x="40" y="982" width="248" height="152" rx="12" fill="#173d69"/>
+  <circle cx="116" cy="1040" r="28" fill="none" stroke="#a8d8ea" stroke-width="2"/>
+  <polygon points="116,1014 136,1054 96,1054" fill="none" stroke="#a8d8ea" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="158" y="1026" width="100" height="10" rx="5" fill="#a8d8ea"/>
+  <rect x="158" y="1046" width="70" height="8" rx="4" fill="#4a9ec0" fill-opacity="0.6"/>
+  <rect x="158" y="1092" width="80" height="8" rx="4" fill="#4a9ec0" fill-opacity="0.4"/>
+  <rect x="158" y="1108" width="60" height="8" rx="4" fill="#4a9ec0" fill-opacity="0.4"/>
+
+  <!-- Letterhead preview -->
+  <rect x="312" y="982" width="248" height="152" rx="12" fill="#ffffff" stroke="#c8d8e8" stroke-width="1.5"/>
+  <rect x="312" y="982" width="248" height="28" rx="12" fill="#a8d8ea" fill-opacity="0.35"/>
+  <rect x="326" y="1036" width="120" height="8" rx="4" fill="#c8d8e8"/>
+  <rect x="326" y="1054" width="180" height="6" rx="3" fill="#e0ecf5"/>
+  <rect x="326" y="1068" width="160" height="6" rx="3" fill="#e0ecf5"/>
+  <rect x="326" y="1082" width="180" height="6" rx="3" fill="#e0ecf5"/>
+  <rect x="326" y="1096" width="140" height="6" rx="3" fill="#e0ecf5"/>
+  <rect x="326" y="1110" width="170" height="6" rx="3" fill="#e0ecf5"/>
+
+  <!-- Label -->
+  <text x="300" y="1178" fill="#8aaac0" font-family="Arial,sans-serif" font-size="14" text-anchor="middle" letter-spacing="3">DECK + PRINT</text>
+</svg>

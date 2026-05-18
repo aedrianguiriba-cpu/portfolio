@@ -59,7 +59,7 @@
             <h2>Graphic Design</h2>
             <span class="pill">Visual Systems</span>
           </div>
-          <p>Identity systems, campaign assets, and editorial layouts with clear hierarchy.</p>
+          <p>Identity systems, campaign assets, hand-crafted illustrations, and print collateral.</p>
           <div class="design-album" data-design-album>
             <button
               class="album-card"
@@ -70,7 +70,7 @@
               data-gallery-alt="Brand identity presentation artwork"
               data-gallery-title="Brand Identity"
             >
-              <img src="assets/images/design/cool-brand-neon.svg" alt="Neon brand identity artwork" loading="lazy" />
+              <img src="assets/images/design/thumb-brand.svg" alt="Brand identity — brand strategy moodboard with colour swatches and Pantone cards" loading="lazy" />
               <span>Brand Identity</span>
             </button>
             <button
@@ -82,32 +82,32 @@
               data-gallery-alt="Social campaign concept artwork"
               data-gallery-title="Social Campaigns"
             >
-              <img src="assets/images/design/cool-social-cyber.svg" alt="Cyber social campaign artwork" loading="lazy" />
+              <img src="assets/images/design/thumb-social.svg" alt="Social campaigns — content creator filming with smartphone and ring light" loading="lazy" />
               <span>Social Campaigns</span>
             </button>
             <button
               class="album-card"
               type="button"
               data-gallery-open
-              data-gallery-set="deck"
-              data-gallery-src="assets/images/design/deck-print.svg"
-              data-gallery-alt="Deck and print presentation artwork"
-              data-gallery-title="Deck and Print"
+              data-gallery-set="illustration"
+              data-gallery-src="assets/images/design/illustration.svg"
+              data-gallery-alt="Illustration portfolio — vector and digital art"
+              data-gallery-title="Illustrations"
             >
-              <img src="assets/images/design/cool-deck-liquid.svg" alt="Liquid style deck and print artwork" loading="lazy" />
-              <span>Deck and Print</span>
+              <img src="assets/images/design/thumb-illustration.svg" alt="Illustrations — vibrant digital artwork displayed on a tablet" loading="lazy" />
+              <span>Illustrations</span>
             </button>
             <button
               class="album-card"
               type="button"
               data-gallery-open
-              data-gallery-set="editorial"
-              data-gallery-src="assets/images/design/editorial-layout.svg"
-              data-gallery-alt="Editorial layout concept artwork"
-              data-gallery-title="Editorial Layout"
+              data-gallery-set="print"
+              data-gallery-src="assets/images/design/print-materials.svg"
+              data-gallery-alt="Print materials — posters, brochures and collateral"
+              data-gallery-title="Print Materials"
             >
-              <img src="assets/images/design/cool-editorial-glass.svg" alt="Glass editorial layout artwork" loading="lazy" />
-              <span>Editorial Layout</span>
+              <img src="assets/images/design/thumb-print.svg" alt="Print materials — assorted magazines and print collateral" loading="lazy" />
+              <span>Print Materials</span>
             </button>
           </div>
         </article>
@@ -181,15 +181,46 @@
           </div>
           <div class="assistant-bento">
             <article class="mini-card assistant-card assistant-intro span-2">
-              <h3>Operations Snapshot</h3>
+              <div class="intro-head">
+                <div>
+                  <span class="intro-role">Virtual Assistant</span>
+                  <h3>Operations Snapshot</h3>
+                </div>
+                <span class="intro-available">
+                  <span class="intro-ping"></span>Available
+                </span>
+              </div>
               <p>I organize daily operations with clear priorities, documented workflows, and reliable follow-through.</p>
+              <div class="intro-highlights">
+                <span class="intro-highlight">Inbox Zero</span>
+                <span class="intro-highlight">Async-First</span>
+                <span class="intro-highlight">100% Remote</span>
+                <span class="intro-highlight">Detail-Oriented</span>
+              </div>
             </article>
             <article class="mini-card assistant-card assistant-tasks span-1">
               <h3>Core Tasks</h3>
               <ul class="task-list">
-                <li>Calendar and email management</li>
-                <li>Research and documentation</li>
-                <li>Client follow-up and CRM updates</li>
+                <li class="task-item">
+                  <span class="task-dot" style="--dot: #ffd6a5; --glow: rgba(255,214,165,0.5)"></span>
+                  <span class="task-label">Calendar &amp; Email</span>
+                  <span class="task-freq">Daily</span>
+                </li>
+                <li class="task-item">
+                  <span class="task-dot" style="--dot: #ffb3c6; --glow: rgba(255,179,198,0.5)"></span>
+                  <span class="task-label">Social Media</span>
+                  <span class="task-freq">Daily</span>
+                </li>
+                <li class="task-item">
+                  <span class="task-dot" style="--dot: #a8d8ea; --glow: rgba(168,216,234,0.5)"></span>
+                  <span class="task-label">Research &amp; Docs</span>
+                  <span class="task-freq">Weekly</span>
+                </li>
+                <li class="task-item">
+                  <span class="task-dot" style="--dot: #b5ead7; --glow: rgba(181,234,215,0.5)"></span>
+                  <span class="task-label">Client Follow-ups</span>
+                  <span class="task-freq">Ongoing</span>
+                </li>
               </ul>
             </article>
             <article class="mini-card assistant-card assistant-calendar-card span-1">
@@ -228,17 +259,48 @@
                 </article>
               </div>
             </article>
-            <article class="mini-card assistant-card assistant-tags-card span-3">
-              <h3>Capabilities</h3>
-              <div class="assistant-tags" aria-label="Virtual assistant capabilities">
-                <span>Inbox Triage</span>
-                <span>Meeting Briefs</span>
-                <span>Travel Planning</span>
-                <span>CRM Hygiene</span>
-                <span>SOP Documentation</span>
-                <span>Client Follow-ups</span>
-              </div>
-            </article>
+            <div class="assistant-charts-caps-row">
+              <article class="mini-card assistant-card assistant-charts-card">
+                <div class="assistant-chart-header">
+                  <h3>Weekly Workload</h3>
+                  <span class="assistant-chart-badge">This Week</span>
+                </div>
+                <div class="assistant-chart" role="img" aria-label="Weekly workload split across assistant tasks">
+                  <div class="assistant-chart-row" style="--fill: 88%; --bar: #ffd6a5; --glow: rgba(255,214,165,0.5)">
+                    <span class="assistant-chart-label"><span class="assistant-chart-dot"></span>Inbox</span>
+                    <span class="assistant-chart-track"><span class="assistant-chart-fill"></span></span>
+                    <span class="assistant-chart-value">88%</span>
+                  </div>
+                  <div class="assistant-chart-row" style="--fill: 72%; --bar: #ffb3c6; --glow: rgba(255,179,198,0.5)">
+                    <span class="assistant-chart-label"><span class="assistant-chart-dot"></span>Social</span>
+                    <span class="assistant-chart-track"><span class="assistant-chart-fill"></span></span>
+                    <span class="assistant-chart-value">72%</span>
+                  </div>
+                  <div class="assistant-chart-row" style="--fill: 64%; --bar: #a8d8ea; --glow: rgba(168,216,234,0.5)">
+                    <span class="assistant-chart-label"><span class="assistant-chart-dot"></span>Research</span>
+                    <span class="assistant-chart-track"><span class="assistant-chart-fill"></span></span>
+                    <span class="assistant-chart-value">64%</span>
+                  </div>
+                  <div class="assistant-chart-row" style="--fill: 79%; --bar: #b5ead7; --glow: rgba(181,234,215,0.5)">
+                    <span class="assistant-chart-label"><span class="assistant-chart-dot"></span>Follow-ups</span>
+                    <span class="assistant-chart-track"><span class="assistant-chart-fill"></span></span>
+                    <span class="assistant-chart-value">79%</span>
+                  </div>
+                </div>
+              </article>
+              <article class="mini-card assistant-card assistant-tags-card">
+                <h3>Capabilities</h3>
+                <div class="assistant-tags" aria-label="Virtual assistant capabilities">
+                  <span>Inbox Triage</span>
+                  <span>Meeting Briefs</span>
+                  <span>Social Media Management</span>
+                  <span>Travel Planning</span>
+                  <span>CRM Hygiene</span>
+                  <span>SOP Documentation</span>
+                  <span>Client Follow-ups</span>
+                </div>
+              </article>
+            </div>
           </div>
         </article>
 
@@ -306,9 +368,9 @@
               <div class="tools-category-content">
                 <div class="chips">
                   <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/figma" alt="Figma logo" /><strong>Figma</strong></div><div class="tool-card-back expert"><span class="back-tool-name">Figma</span><span class="back-level-label">Expert</span></div></div></article>
-                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/adobeillustrator" alt="Adobe Illustrator logo" /><strong>Adobe Illustrator</strong></div><div class="tool-card-back expert"><span class="back-tool-name">Adobe Illustrator</span><span class="back-level-label">Expert</span></div></div></article>
-                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/adobephotoshop" alt="Photoshop logo" /><strong>Photoshop</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">Photoshop</span><span class="back-level-label">Advanced</span></div></div></article>
-                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/canva" alt="Canva logo" /><strong>Canva</strong></div><div class="tool-card-back expert"><span class="back-tool-name">Canva</span><span class="back-level-label">Expert</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://api.iconify.design/logos/adobe-illustrator.svg" alt="Adobe Illustrator logo" /><strong>Adobe Illustrator</strong></div><div class="tool-card-back expert"><span class="back-tool-name">Adobe Illustrator</span><span class="back-level-label">Expert</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://api.iconify.design/logos/adobe-photoshop.svg" alt="Photoshop logo" /><strong>Photoshop</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">Photoshop</span><span class="back-level-label">Advanced</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/canva.svg" alt="Canva logo" /><strong>Canva</strong></div><div class="tool-card-back expert"><span class="back-tool-name">Canva</span><span class="back-level-label">Expert</span></div></div></article>
                 </div>
               </div>
             </div>
@@ -320,8 +382,8 @@
               </button>
               <div class="tools-category-content">
                 <div class="chips">
-                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/adobepremierepro" alt="Adobe Premiere Pro logo" /><strong>Adobe Premiere Pro</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">Adobe Premiere Pro</span><span class="back-level-label">Advanced</span></div></div></article>
-                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/capcut" alt="CapCut logo" /><strong>CapCut</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">CapCut</span><span class="back-level-label">Advanced</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://api.iconify.design/logos/adobe-premiere.svg" alt="Adobe Premiere Pro logo" /><strong>Adobe Premiere Pro</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">Adobe Premiere Pro</span><span class="back-level-label">Advanced</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://api.iconify.design/mdi:content-cut.svg" alt="CapCut logo" /><strong>CapCut</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">CapCut</span><span class="back-level-label">Advanced</span></div></div></article>
                 </div>
               </div>
             </div>
@@ -362,10 +424,10 @@
               </button>
               <div class="tools-category-content">
                 <div class="chips">
-                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/microsoftoffice" alt="Microsoft Office logo" /><strong>MS Office</strong></div><div class="tool-card-back expert"><span class="back-tool-name">MS Office</span><span class="back-level-label">Expert</span></div></div></article>
-                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/googleworkspace" alt="Google Workspace logo" /><strong>Google Workspace</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">Google Workspace</span><span class="back-level-label">Advanced</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftoffice.svg" alt="Microsoft Office logo" /><strong>MS Office</strong></div><div class="tool-card-back expert"><span class="back-tool-name">MS Office</span><span class="back-level-label">Expert</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://api.iconify.design/logos/google-workspace.svg" alt="Google Workspace logo" /><strong>Google Workspace</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">Google Workspace</span><span class="back-level-label">Advanced</span></div></div></article>
                   <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/trello" alt="Trello logo" /><strong>Trello</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">Trello</span><span class="back-level-label">Advanced</span></div></div></article>
-                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://cdn.simpleicons.org/youtrack" alt="YouTrack logo" /><strong>YouTrack</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">YouTrack</span><span class="back-level-label">Advanced</span></div></div></article>
+                  <article class="tool-card"><div class="tool-card-inner"><div class="tool-card-front"><img class="tool-logo" src="https://api.iconify.design/logos/youtrack.svg" alt="YouTrack logo" /><strong>YouTrack</strong></div><div class="tool-card-back advanced"><span class="back-tool-name">YouTrack</span><span class="back-level-label">Advanced</span></div></div></article>
                 </div>
               </div>
             </div>
@@ -390,7 +452,7 @@
             data-gallery-alt="Brand identity presentation artwork"
             data-gallery-title="Brand Identity"
           >
-            <img src="assets/images/design/cool-brand-neon.svg" alt="Neon brand identity artwork" loading="lazy" />
+            <img src="assets/images/design/thumb-brand.svg" alt="Brand identity — brand strategy moodboard with colour swatches and Pantone cards" loading="lazy" />
             <span>Brand Identity</span>
           </button>
           <button
@@ -403,7 +465,7 @@
             data-gallery-alt="Social campaign concept artwork"
             data-gallery-title="Social Campaigns"
           >
-            <img src="assets/images/design/cool-social-cyber.svg" alt="Cyber social campaign artwork" loading="lazy" />
+            <img src="assets/images/design/thumb-social.svg" alt="Social campaigns — content creator filming with smartphone and ring light" loading="lazy" />
             <span>Social Campaigns</span>
           </button>
           <button
@@ -411,26 +473,26 @@
             type="button"
             data-gallery-open
             data-gallery-index="2"
-            data-gallery-set="deck"
-            data-gallery-src="assets/images/design/deck-print.svg"
-            data-gallery-alt="Deck and print presentation artwork"
-            data-gallery-title="Deck and Print"
+            data-gallery-set="illustration"
+            data-gallery-src="assets/images/design/illustration.svg"
+            data-gallery-alt="Illustration portfolio — vector and digital art"
+            data-gallery-title="Illustrations"
           >
-            <img src="assets/images/design/cool-deck-liquid.svg" alt="Liquid style deck and print artwork" loading="lazy" />
-            <span>Deck and Print</span>
+            <img src="assets/images/design/thumb-illustration.svg" alt="Illustrations — vibrant digital artwork displayed on a tablet" loading="lazy" />
+            <span>Illustrations</span>
           </button>
           <button
             class="album-card"
             type="button"
             data-gallery-open
             data-gallery-index="3"
-            data-gallery-set="editorial"
-            data-gallery-src="assets/images/design/editorial-layout.svg"
-            data-gallery-alt="Editorial layout concept artwork"
-            data-gallery-title="Editorial Layout"
+            data-gallery-set="print"
+            data-gallery-src="assets/images/design/print-materials.svg"
+            data-gallery-alt="Print materials — posters, brochures and collateral"
+            data-gallery-title="Print Materials"
           >
-            <img src="assets/images/design/cool-editorial-glass.svg" alt="Glass editorial layout artwork" loading="lazy" />
-            <span>Editorial Layout</span>
+            <img src="assets/images/design/thumb-print.svg" alt="Print materials — assorted magazines and print collateral" loading="lazy" />
+            <span>Print Materials</span>
           </button>
         </div>
       </section>
@@ -482,9 +544,26 @@
           <div class="assistant-calendar-grid" data-calendar-grid></div>
         </div>
         <ul class="task-list">
-          <li>Calendar and email management</li>
-          <li>Research and documentation</li>
-          <li>Client follow-up and CRM updates</li>
+          <li class="task-item">
+            <span class="task-dot" style="--dot: #ffd6a5; --glow: rgba(255,214,165,0.5)"></span>
+            <span class="task-label">Calendar &amp; Email</span>
+            <span class="task-freq">Daily</span>
+          </li>
+          <li class="task-item">
+            <span class="task-dot" style="--dot: #ffb3c6; --glow: rgba(255,179,198,0.5)"></span>
+            <span class="task-label">Social Media</span>
+            <span class="task-freq">Daily</span>
+          </li>
+          <li class="task-item">
+            <span class="task-dot" style="--dot: #a8d8ea; --glow: rgba(168,216,234,0.5)"></span>
+            <span class="task-label">Research &amp; Docs</span>
+            <span class="task-freq">Weekly</span>
+          </li>
+          <li class="task-item">
+            <span class="task-dot" style="--dot: #b5ead7; --glow: rgba(181,234,215,0.5)"></span>
+            <span class="task-label">Client Follow-ups</span>
+            <span class="task-freq">Ongoing</span>
+          </li>
         </ul>
         <div class="assistant-content">
           <p class="assistant-blurb">I organize daily operations with clear priorities, documented workflows, and reliable follow-through.</p>
@@ -502,9 +581,32 @@
               <span>Schedule accuracy target</span>
             </article>
           </div>
+          <div class="assistant-chart" role="img" aria-label="Weekly workload split across assistant tasks">
+            <div class="assistant-chart-row" style="--fill: 88%; --bar: #ffd6a5; --glow: rgba(255,214,165,0.5)">
+              <span class="assistant-chart-label"><span class="assistant-chart-dot"></span>Inbox</span>
+              <span class="assistant-chart-track"><span class="assistant-chart-fill"></span></span>
+              <span class="assistant-chart-value">88%</span>
+            </div>
+            <div class="assistant-chart-row" style="--fill: 72%; --bar: #ffb3c6; --glow: rgba(255,179,198,0.5)">
+              <span class="assistant-chart-label"><span class="assistant-chart-dot"></span>Social</span>
+              <span class="assistant-chart-track"><span class="assistant-chart-fill"></span></span>
+              <span class="assistant-chart-value">72%</span>
+            </div>
+            <div class="assistant-chart-row" style="--fill: 64%; --bar: #a8d8ea; --glow: rgba(168,216,234,0.5)">
+              <span class="assistant-chart-label"><span class="assistant-chart-dot"></span>Research</span>
+              <span class="assistant-chart-track"><span class="assistant-chart-fill"></span></span>
+              <span class="assistant-chart-value">64%</span>
+            </div>
+            <div class="assistant-chart-row" style="--fill: 79%; --bar: #b5ead7; --glow: rgba(181,234,215,0.5)">
+              <span class="assistant-chart-label"><span class="assistant-chart-dot"></span>Follow-ups</span>
+              <span class="assistant-chart-track"><span class="assistant-chart-fill"></span></span>
+              <span class="assistant-chart-value">79%</span>
+            </div>
+          </div>
           <div class="assistant-tags" aria-label="Virtual assistant capabilities">
             <span>Inbox Triage</span>
             <span>Meeting Briefs</span>
+            <span>Social Media Management</span>
             <span>Travel Planning</span>
             <span>CRM Hygiene</span>
             <span>SOP Documentation</span>
@@ -587,7 +689,7 @@
                 <article class="tool-card">
                   <div class="tool-card-inner">
                     <div class="tool-card-front">
-                      <img class="tool-logo" src="https://cdn.simpleicons.org/adobeillustrator" alt="Adobe Illustrator logo" />
+                      <img class="tool-logo" src="https://api.iconify.design/logos/adobe-illustrator.svg" alt="Adobe Illustrator logo" />
                       <strong>Adobe Illustrator</strong>
                     </div>
                     <div class="tool-card-back expert">
@@ -599,7 +701,7 @@
                 <article class="tool-card">
                   <div class="tool-card-inner">
                     <div class="tool-card-front">
-                      <img class="tool-logo" src="https://cdn.simpleicons.org/adobephotoshop" alt="Photoshop logo" />
+                      <img class="tool-logo" src="https://api.iconify.design/logos/adobe-photoshop.svg" alt="Photoshop logo" />
                       <strong>Photoshop</strong>
                     </div>
                     <div class="tool-card-back advanced">
@@ -611,7 +713,7 @@
                 <article class="tool-card">
                   <div class="tool-card-inner">
                     <div class="tool-card-front">
-                      <img class="tool-logo" src="https://cdn.simpleicons.org/canva" alt="Canva logo" />
+                      <img class="tool-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/canva.svg" alt="Canva logo" />
                       <strong>Canva</strong>
                     </div>
                     <div class="tool-card-back expert">
@@ -635,7 +737,7 @@
                 <article class="tool-card">
                   <div class="tool-card-inner">
                     <div class="tool-card-front">
-                      <img class="tool-logo" src="https://cdn.simpleicons.org/adobepremierepro" alt="Adobe Premiere Pro logo" />
+                      <img class="tool-logo" src="https://api.iconify.design/logos/adobe-premiere.svg" alt="Adobe Premiere Pro logo" />
                       <strong>Adobe Premiere Pro</strong>
                     </div>
                     <div class="tool-card-back advanced">
@@ -647,7 +749,7 @@
                 <article class="tool-card">
                   <div class="tool-card-inner">
                     <div class="tool-card-front">
-                      <img class="tool-logo" src="https://cdn.simpleicons.org/capcut" alt="CapCut logo" />
+                      <img class="tool-logo" src="https://api.iconify.design/mdi:content-cut.svg" alt="CapCut logo" />
                       <strong>CapCut</strong>
                     </div>
                     <div class="tool-card-back advanced">
@@ -779,7 +881,7 @@
                 <article class="tool-card">
                   <div class="tool-card-inner">
                     <div class="tool-card-front">
-                      <img class="tool-logo" src="https://cdn.simpleicons.org/microsoftoffice" alt="Microsoft Office logo" />
+                      <img class="tool-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftoffice.svg" alt="Microsoft Office logo" />
                       <strong>MS Office</strong>
                     </div>
                     <div class="tool-card-back expert">
@@ -791,7 +893,7 @@
                 <article class="tool-card">
                   <div class="tool-card-inner">
                     <div class="tool-card-front">
-                      <img class="tool-logo" src="https://cdn.simpleicons.org/googleworkspace" alt="Google Workspace logo" />
+                      <img class="tool-logo" src="https://api.iconify.design/logos/google-workspace.svg" alt="Google Workspace logo" />
                       <strong>Google Workspace</strong>
                     </div>
                     <div class="tool-card-back advanced">
@@ -815,7 +917,7 @@
                 <article class="tool-card">
                   <div class="tool-card-inner">
                     <div class="tool-card-front">
-                      <img class="tool-logo" src="https://cdn.simpleicons.org/youtrack" alt="YouTrack logo" />
+                      <img class="tool-logo" src="https://api.iconify.design/logos/youtrack.svg" alt="YouTrack logo" />
                       <strong>YouTrack</strong>
                     </div>
                     <div class="tool-card-back advanced">

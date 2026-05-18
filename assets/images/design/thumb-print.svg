@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-label="Print materials thumbnail">
+  <rect width="1200" height="400" fill="#f0ebe0"/>
+  <rect x="80"  y="40" width="200" height="320" rx="10" fill="#1e2d52"/>
+  <rect x="80"  y="40" width="200" height="8"   rx="6"  fill="#e8b86d"/>
+  <circle cx="180" cy="210" r="72" fill="none" stroke="#e8b86d" stroke-width="2.5"/>
+  <circle cx="180" cy="210" r="36" fill="#e8b86d" fill-opacity="0.2"/>
+  <rect x="340" y="60" width="160" height="280" rx="8" fill="#1e2d52"/>
+  <rect x="512" y="60" width="160" height="280" rx="0" fill="#ffffff" stroke="#d0c8b8" stroke-width="1.5"/>
+  <rect x="684" y="60" width="160" height="280" rx="8" fill="#e8b86d"/>
+  <rect x="910" y="100" width="230" height="130" rx="8" fill="#1e2d52"/>
+  <rect x="910" y="100" width="4"   height="130" rx="3" fill="#e8b86d"/>
+  <rect x="910" y="252" width="230" height="120" rx="8" fill="#ffffff" stroke="#d0c8b8" stroke-width="1.5"/>
+  <rect x="910" y="252" width="96"  height="120" rx="8" fill="#e8b86d" fill-opacity="0.4"/>
+</svg>
