@@ -503,36 +503,150 @@ const galleryNextButton = document.querySelector('[data-gallery-modal-next]');
 const galleryCollections = {
   brand: [
     {
-      src: 'assets/images/design/cool-brand-neon.svg',
-      alt: 'Neon brand identity artwork',
-      title: 'Neon Identity'
+      src: 'assets/images/brand/logo.png',
+      alt: 'Kamangyan Chili Garlic logo',
+      title: 'Kamangyan Chili Garlic',
+      moodboard: true,
+      subtitle: 'Food & Condiment Brand',
+      description: 'Bold and fiery identity for a local Filipino chili garlic brand — warm earthy tones and energetic character that puts the heat front and center.',
+      colors: ['#cc1515', '#3a8c1e', '#f5c425', '#1a1a1a'],
+      colorRoles: ['Chili Red', 'Garlic Green', 'Spice Gold', 'Outline'],
+      tags: ['Food Brand', 'Packaging', 'Local Brand']
     },
     {
-      src: 'assets/images/design/brand-identity-2.svg',
-      alt: 'Brand identity moodboard artwork',
-      title: 'Brand Moodboard'
+      src: 'assets/images/brand/logo1.png',
+      alt: 'Cello-IT cellphone store logo',
+      title: 'Cello-IT',
+      moodboard: true,
+      subtitle: 'Cellphone Retail Store',
+      description: 'Modern and trustworthy identity for a cellphone retail store — clean tech aesthetics that communicate reliability and cutting-edge service.',
+      colors: ['#f7a520', '#29b5e8', '#e8f6fc', '#ffffff'],
+      colorRoles: ['Brand Orange', 'Sky Blue', 'Tint', 'White'],
+      tags: ['Retail', 'Technology', 'Store Brand']
     },
     {
-      src: 'assets/images/design/brand-identity-3.svg',
-      alt: 'Brand application mockup artwork',
-      title: 'Brand Applications'
+      src: 'assets/images/brand/logo4.png',
+      alt: 'uBeequitous tech company logo',
+      title: 'uBeequitous',
+      moodboard: true,
+      subtitle: 'Technology Company',
+      description: 'Forward-thinking identity for a tech company bridging innovation and accessibility — vibrant and energetic with a playful mascot spirit.',
+      colors: ['#f5b72a', '#00c8d4', '#e91e8c', '#1a1a1a'],
+      colorRoles: ['Bee Amber', 'Cyber Cyan', 'Neon Pink', 'Black'],
+      tags: ['Tech Company', 'Software', 'Innovation']
+    },
+    {
+      src: 'assets/images/brand/icon.png',
+      alt: 'Hey Enterprises ecommerce logo',
+      title: 'Hey Enterprises',
+      moodboard: true,
+      subtitle: 'E-Commerce Company',
+      description: 'Friendly and approachable identity for an e-commerce brand — warm golden tones paired with sky blue convey energy, trust, and forward momentum.',
+      colors: ['#f5aa00', '#29abe2', '#1a7bbf', '#ffffff'],
+      colorRoles: ['Brand Gold', 'Sky Blue', 'Deep Blue', 'White'],
+      tags: ['E-Commerce', 'Retail', 'Online Store']
+    },
+    {
+      src: 'assets/images/brand/ikun.png',
+      alt: 'Metari ecommerce logo',
+      title: 'Metari',
+      moodboard: true,
+      subtitle: 'E-Commerce Marketplace',
+      description: 'Partnership-driven identity symbolised by a handshake — bold blue and golden amber represent trust, collaboration, and commerce working hand in hand.',
+      colors: ['#2980d4', '#f5aa22', '#1a5fa0', '#ffffff'],
+      colorRoles: ['Brand Blue', 'Brand Gold', 'Deep Blue', 'White'],
+      tags: ['E-Commerce', 'Marketplace', 'Partnership']
+    },
+    {
+      src: 'assets/images/brand/logouuu.png',
+      alt: 'Mathew Water Refilling Station logo',
+      title: 'Mathew Water',
+      moodboard: true,
+      subtitle: 'Water Refilling Station',
+      description: 'Pure and refreshing identity for a local water refilling station — fluid blues and a golden crown communicate premium quality and everyday trust.',
+      colors: ['#29abe2', '#f5c030', '#7fd3f0', '#ffffff'],
+      colorRoles: ['Wave Blue', 'Crown Gold', 'Aqua Tint', 'White'],
+      tags: ['Water Station', 'Local Brand', 'Service']
     }
   ],
   social: [
     {
-      src: 'assets/images/design/cool-social-cyber.svg',
-      alt: 'Cyber social campaign artwork',
-      title: 'Cyber Campaign'
+      src: 'assets/images/social/fbsample1.jpg',
+      alt: 'BulletproofZone ballistic helmet product ad',
+      title: 'Ballistic Helmet Ad',
+      type: 'social',
+      subtitle: 'Product Campaign',
+      platform: 'Facebook · Instagram',
+      format: '1080 × 1080 · Square',
+      description: 'High-impact product ad for BulletproofZone — tactical bold typography and diagonal stripe layouts drive urgency for a premium tactical helmet.',
+      colors: ['#1a1a1a', '#c84b0a', '#ffffff', '#e8e0d8'],
+      colorRoles: ['Black', 'Brand Orange', 'White', 'Light'],
+      tags: ['Product Ad', 'E-Commerce', 'Tactical']
     },
     {
-      src: 'assets/images/design/social-campaign-2.svg',
-      alt: 'Social campaign carousel artwork',
-      title: 'Carousel Concepts'
+      src: 'assets/images/social/budangposter.jpg',
+      alt: 'Bistro Pares franchise recruitment poster',
+      title: 'Bistro Pares',
+      type: 'social',
+      subtitle: 'Franchise Campaign',
+      platform: 'Facebook',
+      format: '1080 × 1350 · Portrait',
+      description: 'Franchise recruitment poster for Bistro Pares — personality-led design spotlights the owner to build trust and drive co-franchise sign-ups.',
+      colors: ['#8b1a1a', '#1a1a1a', '#ffffff', '#c0c0c0'],
+      colorRoles: ['Brand Red', 'Dark', 'White', 'Silver'],
+      tags: ['Franchise', 'Food & Dining', 'Local Brand']
     },
     {
-      src: 'assets/images/design/social-campaign-3.svg',
-      alt: 'Social story frames artwork',
-      title: 'Story Frames'
+      src: 'assets/images/social/fb.jpg',
+      alt: 'Morning Brew coffee product launch ad',
+      title: 'Morning Brew',
+      type: 'social',
+      subtitle: 'Product Launch',
+      platform: 'Facebook · Instagram',
+      format: '1080 × 1080 · Square',
+      description: 'Vibrant product launch post for Morning Brew — dynamic coffee splash photography paired with warm amber tones captures freshness and energy.',
+      colors: ['#f5a800', '#5c3d11', '#3a7d2c', '#e84040'],
+      colorRoles: ['Amber', 'Coffee Brown', 'Leaf Green', 'Red Accent'],
+      tags: ['Food & Beverage', 'Product Launch', 'Photography']
+    },
+    {
+      src: 'assets/images/social/outANGMAHALAGA copy.jpg',
+      alt: 'Ang Mahalaga music single release announcement',
+      title: 'Ang Mahalaga',
+      type: 'social',
+      subtitle: 'Music Release',
+      platform: 'Spotify · YouTube Music · Apple Music',
+      format: '1080 × 1080 · Square',
+      description: 'Single release announcement — soft floral cover art set against vivid sunshine yellow creates an uplifting, scroll-stopping launch moment.',
+      colors: ['#f5e200', '#1a1a1a', '#e91e8c', '#00bcd4'],
+      colorRoles: ['Sunshine Yellow', 'Black', 'Hot Pink', 'Cyan'],
+      tags: ['Music Release', 'Out Now', 'Digital Media']
+    },
+    {
+      src: 'assets/images/social/opening poster.jpg',
+      alt: 'Vince Maris Basketball Cup Season 2 event poster',
+      title: 'Vince Maris Cup',
+      type: 'social',
+      subtitle: 'Sports Event',
+      platform: 'Facebook',
+      format: '1080 × 1350 · Portrait',
+      description: 'Event promotional poster for Vince Maris Basketball Cup Season 2 — arena atmosphere and glowing purple gradients build hype for the inter-barangay league.',
+      colors: ['#1a237e', '#7b1fa2', '#f5a800', '#ffffff'],
+      colorRoles: ['Deep Navy', 'Purple', 'Gold', 'White'],
+      tags: ['Sports Event', 'Basketball', 'Community']
+    },
+    {
+      src: 'assets/images/social/investnow.jpg',
+      alt: 'Konektado Invest Now 2023 campaign poster',
+      title: 'Konektado — Invest Now',
+      type: 'social',
+      subtitle: 'Investment Campaign',
+      platform: 'Facebook',
+      format: '1080 × 1080 · Square',
+      description: 'High-conviction investment recruitment poster for Konektado — bold 49% ROI headline paired with real operations photography drives credibility and urgency.',
+      colors: ['#1a5c1a', '#c89600', '#c01515', '#1a1a1a'],
+      colorRoles: ['Brand Green', 'Gold', 'Action Red', 'Dark'],
+      tags: ['Investment', 'Franchise', 'Finance']
     }
   ],
   deck: [
@@ -612,9 +726,179 @@ function renderGallerySlide(index) {
   const item = activeGalleryItems[safeIndex];
   activeGalleryIndex = safeIndex;
 
-  galleryModalImage.src = item.src;
-  galleryModalImage.alt = item.alt;
-  galleryModalTitle.textContent = item.title;
+  const moodboardEl = document.querySelector('[data-gallery-moodboard]');
+  const figureEl = document.querySelector('.gallery-modal-figure');
+
+  const isMoodboard = item.moodboard || item.type === 'social';
+
+  if (isMoodboard && moodboardEl) {
+    galleryModalImage.src = '';
+    galleryModalImage.alt = '';
+    galleryModalTitle.textContent = '';
+    if (figureEl) figureEl.hidden = true;
+    moodboardEl.hidden = false;
+
+    const roles = item.colorRoles || ['Primary', 'Secondary', 'Tertiary', 'Neutral'];
+    const swatchColsHtml = (item.colors || []).map((c, i) =>
+      `<div class="mb-swatch-col" style="--sw:${c}">
+        <div class="mb-swatch-fill"></div>
+        <div class="mb-swatch-info">
+          <span class="mb-swatch-role">${roles[i] || ''}</span>
+          <span class="mb-swatch-hex">${c}</span>
+        </div>
+      </div>`
+    ).join('');
+
+    const tagsHtml = (item.tags || []).map(t =>
+      `<span class="mb-tag">${t}</span>`
+    ).join('');
+
+    const accentColor = (item.colors && item.colors[item.type === 'social' ? 0 : 1]) || '#1a1a1a';
+    moodboardEl.style.setProperty('--mb-accent', accentColor);
+
+    if (item.type === 'social') {
+      const circlesHtml = (item.colors || []).map(c =>
+        `<span class="sm-circle" style="--sw:${c}" title="${c}"></span>`
+      ).join('');
+
+      const hashtagsHtml = (item.tags || []).map(t =>
+        `<span class="sm-hashtag">#${t.replace(/\s+/g, '')}</span>`
+      ).join('');
+
+      moodboardEl.innerHTML = `
+        <div class="sm-board">
+          <div class="sm-board-header">
+            <span class="sm-board-label">Social Campaign</span>
+            <span class="sm-board-platform">${item.platform || 'Social Media'}</span>
+          </div>
+          <div class="sm-board-body">
+            <div class="sm-phone-wrap">
+              <img src="${item.src}" alt="" class="sm-phone-bg-img" aria-hidden="true" />
+              <div class="sm-bg-elements" aria-hidden="true">
+                <span class="sm-bg-orb sm-bg-orb-1"></span>
+                <span class="sm-bg-orb sm-bg-orb-2"></span>
+                <span class="sm-bg-orb sm-bg-orb-3"></span>
+                <span class="sm-bg-bubble sm-bg-bubble-likes">
+                  <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                  1,284
+                </span>
+                <span class="sm-bg-bubble sm-bg-bubble-comments">
+                  <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  347
+                </span>
+                <span class="sm-bg-bubble sm-bg-bubble-shares">
+                  <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  89
+                </span>
+                <span class="sm-bg-tag">#${(item.tags && item.tags[0] || 'Design').replace(/\s+/g,'')}</span>
+                <span class="sm-bg-tag sm-bg-tag-2">#${(item.tags && item.tags[1] || 'Creative').replace(/\s+/g,'')}</span>
+              </div>
+              <div class="sm-phone">
+                <div class="sm-phone-screen">
+                  <div class="sm-phone-island"></div>
+                  <div class="sm-ig-statusbar">
+                    <span class="sm-ig-time">9:41</span>
+                    <div class="sm-ig-signal">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <div class="sm-ig-appbar">
+                    <span class="sm-ig-appbar-logo">Instagram</span>
+                    <div class="sm-ig-appbar-icons">
+                      <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                      <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </div>
+                  </div>
+                  <div class="sm-ig-post-header">
+                    <div class="sm-ig-avatar-wrap">
+                      <div class="sm-ig-avatar">
+                        <div class="sm-ig-avatar-inner"></div>
+                      </div>
+                    </div>
+                    <div class="sm-ig-post-user">
+                      <span class="sm-ig-post-username">aedrian.guiriba</span>
+                      <span class="sm-ig-post-location">${item.subtitle || 'Social Media'}</span>
+                    </div>
+                    <span class="sm-ig-post-more">•••</span>
+                  </div>
+                  <div class="sm-ig-post-image">
+                    <img src="${item.src}" alt="${item.alt}" />
+                  </div>
+                  <div class="sm-ig-actions">
+                    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    <svg class="sm-ig-bookmark-btn" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <div class="sm-ig-likes">1,284 likes</div>
+                  <div class="sm-ig-caption">
+                    <span class="sm-ig-cap-user">aedrian.guiriba </span>${item.description ? item.description.slice(0, 80) + '…' : ''}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sm-board-info">
+              <p class="sm-board-type">${item.subtitle || 'Social Media'}</p>
+              <h2 class="sm-board-title">${item.title}</h2>
+              <div class="sm-board-rule"></div>
+              <p class="sm-board-desc">${item.description || ''}</p>
+              <div>
+                <p class="sm-palette-heading">Color Palette</p>
+                <div class="sm-palette-circles">${circlesHtml}</div>
+              </div>
+              <div class="sm-hashtags">${hashtagsHtml}</div>
+            </div>
+          </div>
+          <div class="sm-board-footer">
+            <div class="sm-footer-item">
+              <span class="sm-footer-label">Post Format</span>
+              <span class="sm-footer-value">${item.format || '1080 × 1080 · Square'}</span>
+            </div>
+            <div class="sm-footer-item right">
+              <span class="sm-footer-label">Campaign Type</span>
+              <span class="sm-footer-value">${item.subtitle || 'Social Media'}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      moodboardEl.innerHTML = `
+        <div class="mb-header-strip">
+          <span class="mb-header-label">Brand Identity</span>
+          <span class="mb-category-pill">${item.subtitle || 'Visual Identity'}</span>
+        </div>
+        <div class="mb-main">
+          <div class="mb-logo-panel">
+            <img src="${item.src}" alt="${item.alt}" class="mb-logo-img" />
+          </div>
+          <div class="mb-brand-info">
+            <h2 class="mb-brand-name">${item.title}</h2>
+            <div class="mb-accent-rule"></div>
+            <p class="mb-brand-desc">${item.description || ''}</p>
+            <div class="mb-tags">${tagsHtml}</div>
+          </div>
+        </div>
+        <div class="mb-palette-header">
+          <span class="mb-palette-label">Color Palette</span>
+          <span class="mb-palette-count">${(item.colors || []).length} brand colors</span>
+        </div>
+        <div class="mb-palette">${swatchColsHtml}</div>
+        <div class="mb-dark-bar">
+          <img src="${item.src}" alt="${item.alt} inverted" class="mb-dark-logo" />
+          <div class="mb-dark-meta">
+            <span class="mb-dark-label">Brand Identity System</span>
+            <span class="mb-dark-name">${item.title}</span>
+          </div>
+        </div>
+      `;
+    }
+  } else {
+    if (moodboardEl) { moodboardEl.hidden = true; moodboardEl.innerHTML = ''; }
+    if (figureEl) figureEl.hidden = false;
+    galleryModalImage.src = item.src;
+    galleryModalImage.alt = item.alt;
+    galleryModalTitle.textContent = item.title;
+  }
 
   if (galleryModalCount) {
     galleryModalCount.textContent = `${safeIndex + 1} / ${activeGalleryItems.length}`;
@@ -656,6 +940,10 @@ function closeGalleryModal() {
   if (galleryModalCount) {
     galleryModalCount.textContent = '';
   }
+  const moodboardEl = document.querySelector('[data-gallery-moodboard]');
+  const figureEl = document.querySelector('.gallery-modal-figure');
+  if (moodboardEl) { moodboardEl.hidden = true; moodboardEl.innerHTML = ''; }
+  if (figureEl) figureEl.hidden = false;
   document.body.style.overflow = '';
 }
 
