@@ -418,6 +418,27 @@ const repoLanguageLogos = {
   Rust: 'rust'
 };
 
+const repoLanguageColors = {
+  JavaScript: '#f7df1e',
+  TypeScript: '#3178c6',
+  HTML:       '#e34f26',
+  CSS:        '#264de4',
+  PHP:        '#777bb4',
+  Python:     '#3776ab',
+  Dart:       '#00b4ab',
+  Vue:        '#42b883',
+  'C#':       '#239120',
+  Java:       '#f89820',
+  Shell:      '#4eaa25',
+  'C++':      '#00599c',
+  C:          '#a8b9cc',
+  Go:         '#00add8',
+  Kotlin:     '#7f52ff',
+  Swift:      '#f05138',
+  Ruby:       '#cc342d',
+  Rust:       '#dea584'
+};
+
 function getRepoLanguageLogo(language) {
   if (!language) {
     return 'https://cdn.simpleicons.org/git';
@@ -431,59 +452,142 @@ function getRepoLanguageLogo(language) {
   return `https://cdn.simpleicons.org/${slug}`;
 }
 
+function buildRepoCard(repo, languages) {
+  const description = repo.description || 'No description provided.';
+  const langs = (languages && Object.keys(languages).length ? Object.keys(languages) : (repo.language ? [repo.language] : [])).slice(0, 3);
+  const primaryLang = langs[0] || null;
+  const langColor = repoLanguageColors[primaryLang] || '#1a1a1a';
+
+  const langChips = langs.map(lang => {
+    const color = repoLanguageColors[lang] || '#888';
+    return `<span class="repo-lang-chip" style="--chip-color:${color}">${lang}</span>`;
+  }).join('');
+
+  return `
+    <a class="repo-card" href="${repo.html_url}" target="_blank" rel="noreferrer" style="--lang-color:${langColor}" data-repo-name="${repo.name}">
+      <strong>${repo.name}</strong>
+      <span>${description}</span>
+      ${langChips ? `<small class="repo-lang-chips">${langChips}</small>` : ''}
+    </a>
+  `;
+}
+
+const REPO_CACHE_TTL  = 30 * 60 * 1000;      // 30 min
+const LANG_CACHE_TTL  = 24 * 60 * 60 * 1000; // 24 h
+
+function cacheGet(key) {
+  try { return JSON.parse(localStorage.getItem(key)); } catch { return null; }
+}
+function cacheSet(key, data) {
+  try { localStorage.setItem(key, JSON.stringify(data)); } catch {}
+}
+
+async function fetchAllRepos(username) {
+  const key = `gh_repos_${username}`;
+  const cached = cacheGet(key);
+  if (cached && Date.now() - cached.ts < REPO_CACHE_TTL) return cached.repos;
+
+  const repos = [];
+  let page = 1;
+  while (true) {
+    const r = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100&page=${page}&direction=desc`);
+    if (r.status === 403 || r.status === 429) throw new Error('rate_limit');
+    if (!r.ok) throw new Error('api_error');
+    const batch = await r.json();
+    repos.push(...batch);
+    if (batch.length < 100) break;
+    page++;
+  }
+
+  cacheSet(`gh_repos_${username}`, { ts: Date.now(), repos });
+  return repos;
+}
+
+async function fetchRepoLanguages(username, repos) {
+  const key = `gh_langs_${username}`;
+  const cached = cacheGet(key);
+  if (cached && Date.now() - cached.ts < LANG_CACHE_TTL) return cached.langs;
+
+  const langMap = {};
+  const BATCH = 8;
+  for (let i = 0; i < repos.length; i += BATCH) {
+    const batch = repos.slice(i, i + BATCH);
+    const results = await Promise.all(
+      batch.map(repo =>
+        fetch(repo.languages_url)
+          .then(r => r.ok ? r.json() : null)
+          .catch(() => null)
+      )
+    );
+    let rateLimited = false;
+    results.forEach((langs, j) => {
+      if (langs === null) { rateLimited = true; return; }
+      langMap[batch[j].name] = langs;
+    });
+    if (rateLimited) break; // stop fetching if rate limited, use what we have
+  }
+
+  cacheSet(key, { ts: Date.now(), langs: langMap });
+  return langMap;
+}
+
 async function loadGitHubRepos() {
   const repoContainers = document.querySelectorAll('[data-github-repos]');
 
-  repoContainers.forEach((container) => {
-    const username = container.getAttribute('data-github-username');
-    if (!username) {
-      return;
+  // Group containers by username so we only fetch once per account
+  const byUsername = {};
+  repoContainers.forEach(c => {
+    const u = c.getAttribute('data-github-username');
+    if (u) (byUsername[u] = byUsername[u] || []).push(c);
+  });
+
+  for (const [username, containers] of Object.entries(byUsername)) {
+    containers.forEach(c => { c.innerHTML = '<p class="github-note">Loading repositories...</p>'; });
+
+    let repos = [];
+    try {
+      repos = await fetchAllRepos(username);
+    } catch (err) {
+      const msg = err.message === 'rate_limit'
+        ? 'GitHub rate limit reached — try again in an hour.'
+        : 'Repositories could not be loaded right now.';
+      containers.forEach(c => { c.innerHTML = `<p class="github-note">${msg}</p>`; });
+      continue;
     }
 
-    container.innerHTML = '<p class="github-note">Loading repositories...</p>';
+    if (!repos.length) {
+      containers.forEach(c => { c.innerHTML = '<p class="github-note">No public repositories found.</p>'; });
+      continue;
+    }
 
-    fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100&direction=desc`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Unable to load repositories');
-        }
+    // Render immediately with primary language only
+    const initialCards = repos.map(repo => buildRepoCard(repo, null)).join('');
+    containers.forEach(c => {
+      c.innerHTML = `<div class="repos-track">${initialCards}${initialCards}</div>`;
+      initRepoDrag(c);
+    });
 
-        return response.json();
-      })
-      .then((repos) => {
-        const visibleRepos = repos;
-
-        if (!visibleRepos.length) {
-          container.innerHTML = '<p class="github-note">No public repositories found.</p>';
-          return;
-        }
-
-        container.innerHTML = visibleRepos
-          .map((repo) => {
-            const description = repo.description || 'No description provided.';
-            const language = repo.language || 'Code';
-            const stars = repo.stargazers_count || 0;
-            const languageLogo = getRepoLanguageLogo(repo.language);
-
-            return `
-              <a class="repo-card" href="${repo.html_url}" target="_blank" rel="noreferrer">
-                <strong>${repo.name}</strong>
-                <span>${description}</span>
-                <small class="repo-meta">
-                  <span class="repo-language">
-                    <img class="repo-language-logo" src="${languageLogo}" alt="${language} logo" loading="lazy" />${language}
-                  </span>
-                  <span>${stars} star${stars === 1 ? '' : 's'}</span>
-                </small>
-              </a>
-            `;
-          })
-          .join('');
-      })
-      .catch(() => {
-        container.innerHTML = '<p class="github-note">Repositories could not be loaded right now.</p>';
+    // Fetch all languages (cached 24h) and update cards
+    const langMap = await fetchRepoLanguages(username, repos).catch(() => ({}));
+    repos.forEach(repo => {
+      const langs = langMap[repo.name];
+      if (!langs || !Object.keys(langs).length) return;
+      const newCard = buildRepoCard(repo, langs);
+      containers.forEach(c => {
+        c.querySelectorAll(`[data-repo-name="${repo.name}"]`).forEach(el => {
+          el.outerHTML = newCard;
+        });
       });
-  });
+    });
+  }
+}
+
+function initRepoDrag(grid) {
+  const track = grid.querySelector('.repos-track');
+  if (!track) return;
+
+  grid.addEventListener('mouseenter', () => { track.style.animationPlayState = 'paused'; });
+  grid.addEventListener('mouseleave', () => { track.style.animationPlayState = 'running'; });
 }
 
 loadGitHubRepos();
