@@ -1760,9 +1760,27 @@ h1 {
 }
 
 .tile-mainbox #panel-resume.main-panel.active {
-  display: flex;
-  flex-direction: column;
   height: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #1a1a1a transparent;
+}
+
+.tile-mainbox #panel-resume.main-panel.active::-webkit-scrollbar {
+  width: 5px;
+}
+
+.tile-mainbox #panel-resume.main-panel.active::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tile-mainbox #panel-resume.main-panel.active::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 999px;
+}
+
+.tile-mainbox #panel-resume.main-panel.active::-webkit-scrollbar-thumb:hover {
+  background: #ffb3c6;
 }
 
 .tile-mainbox[data-active-panel="design"] .main-panel.active,
