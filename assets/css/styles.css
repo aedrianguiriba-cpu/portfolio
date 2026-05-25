@@ -3278,8 +3278,8 @@ h1 {
   position: absolute;
   top: 0;
   height: 100%;
-  left: calc(var(--start) / 8 * 100%);
-  width: calc(var(--span) / 8 * 100%);
+  left: calc(var(--start) / 10 * 100%);
+  width: calc(var(--span) / 10 * 100%);
   background: var(--color);
   border: 2px solid #1a1a1a;
   border-radius: 4px;
