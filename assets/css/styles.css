@@ -438,8 +438,15 @@ body {
 
 /* ── Responsive ── */
 @media (max-width: 680px) {
+  .gallery-moodboard {
+    height: auto;
+    overflow: visible;
+  }
+
   .mb-main {
     grid-template-columns: 1fr;
+    flex: none;
+    min-height: auto;
   }
   .mb-logo-panel {
     border-right: none;
@@ -449,6 +456,8 @@ body {
   }
   .mb-brand-info {
     padding: 28px 24px;
+    overflow: visible;
+    min-height: auto;
   }
   .mb-palette {
     grid-template-columns: repeat(2, 1fr);
@@ -3027,15 +3036,18 @@ h1 {
 
 .tile-mainbox #panel-assistant .assistant-calendar-card {
   aspect-ratio: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
 }
 
 .tile-mainbox #panel-assistant .assistant-calendar-card .assistant-calendar {
-  aspect-ratio: 1;
-  width: min(100%, 220px);
-  margin-left: auto;
-  margin-right: auto;
+  flex: 1;
+  width: 100%;
   display: grid;
   grid-template-rows: auto auto 1fr;
+  margin: 0;
+  padding: 8px;
 }
 
 .tile-mainbox #panel-assistant .assistant-calendar-card .assistant-calendar-grid {
@@ -3828,8 +3840,8 @@ h1 {
   }
 
   .bento-layout {
-    width: calc(100vw - 12px);
-    margin-top: 16px;
+    width: auto;
+    margin: 16px;
     grid-template-columns: 1fr;
   }
 
@@ -3899,7 +3911,17 @@ h1 {
   #panel-assistant {
     max-height: none;
     overflow-y: visible;
-    padding-right: 0;
+    padding: 16px;
+  }
+
+  .tile-assistant .assistant-calendar {
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
+
+  .tile-assistant .task-list {
+    padding: 0;
+    margin: 0;
   }
 
   .tile-mainbox #panel-assistant .assistant-bento {
@@ -3918,6 +3940,60 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .tile-mainbox #panel-assistant .assistant-charts-caps-row {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+  }
+
+  .tile-mainbox #panel-assistant .assistant-card {
+    padding: 10px;
+  }
+
+  /* Overview panel — stack vertically on mobile */
+  .overview-layout {
+    flex-direction: column-reverse;
+  }
+
+  .overview-photo {
+    width: 100%;
+    height: 180px;
+    flex-shrink: 0;
+  }
+
+  .overview-photo img {
+    transform: scale(1);
+    object-position: center 20%;
+  }
+
+  #panel-overview.main-panel.active {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .tile-mainbox {
+    height: auto;
+    min-height: 500px;
+    padding: 10px;
+  }
+
+  .tile-mainbox[data-active-panel="overview"] {
+    padding: 0;
+  }
+
+  #panel-overview h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    margin-top: 10px;
+  }
+
+  .overview-text {
+    padding: 20px 16px;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
 
 @media (max-width: 1000px) and (min-width: 761px) {
   .tile-mainbox #panel-assistant .assistant-bento {
@@ -3950,6 +4026,7 @@ h1 {
     grid-column: span 2;
   }
 }
+@media (max-width: 760px) {
   .resume-header-contact {
     text-align: left;
     margin-top: 16px;
@@ -3963,8 +4040,34 @@ h1 {
     width: 38px;
     height: 38px;
     font-size: 1.4rem;
+    top: auto;
+    bottom: 8px;
+    transform: none;
   }
 
+  .gallery-modal-nav.prev {
+    left: 8px;
+  }
+
+  .gallery-modal-nav.next {
+    right: 8px;
+  }
+
+  .gallery-modal-dialog {
+    padding-bottom: 56px;
+  }
+
+  .gallery-modal-figure img {
+    max-height: calc(100svh - 200px);
+  }
+
+  .gallery-modal-close {
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
 }
 
 /* ── Illustration Moodboard ── */
